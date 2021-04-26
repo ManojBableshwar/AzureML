@@ -1,0 +1,12 @@
+type: command_component
+
+name: Hello
+display_name: Hello
+
+version: 1
+
+command: >-
+  echo Hello World
+
+environment: azureml:AzureML-Minimal:1
+
