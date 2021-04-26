@@ -1,12 +1,15 @@
 type: command_component
 
-name: Hello
-display_name: Hello
-
+name: HelloWorld
+display_name: HelloWorldDisplay
 version: 1
 
+inputs:
+  number_input: 10
+  string_input: Hello Pipelines
+
 command: >-
-  echo Hello World
+  echo Hello World {inputs.number_input} {string_input}
 
 environment: azureml:AzureML-Minimal:1
 
