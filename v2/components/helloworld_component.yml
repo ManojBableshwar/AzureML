@@ -9,7 +9,7 @@ inputs:
   string_input: Hello Pipelines
 
 command: >-
-  echo Hello World {inputs.number_input} {string_input}
+  echo Hello World {inputs.number_input} {inputs.string_input}
 
 environment: azureml:AzureML-Minimal:1
 
