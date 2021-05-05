@@ -9,7 +9,7 @@ inputs:
     type: path
   sample_string:
     type: string
-    default: "hello_yaml_world"
+    default: hello yaml world
 
 outputs:
   sample_output:
