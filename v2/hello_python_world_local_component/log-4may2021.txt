@@ -1,0 +1,93 @@
+manoj@Azure:~/clouddrive/repos/AzureML/v2/hello_python_world_local_component$ az ml job create --file hello_pipeline_python.yml --name job2 --debug
+cli.knack.cli: Command arguments: ['ml', 'job', 'create', '--file', 'hello_pipeline_python.yml', '--name', 'job2', '--debug']
+cli.knack.cli: __init__ debug log:
+Enable color in terminal.
+cli.knack.cli: Event: Cli.PreExecute []
+cli.knack.cli: Event: CommandParser.OnGlobalArgumentsCreate [<function CLILogging.on_global_arguments at 0x7fde6d5e1c80>, <function OutputProducer.on_global_arguments at 0x7fde6d5127b8>, <function CLIQuery.on_global_arguments at 0x7fde6d52d8c8>]
+cli.knack.cli: Event: CommandInvoker.OnPreCommandTableCreate []
+cli.azure.cli.core: Modules found from index for 'ml': ['azext_mlv2']
+cli.azure.cli.core: Loading command modules:
+cli.azure.cli.core: Name                  Load Time    Groups  Commands
+cli.azure.cli.core: Total (0)                 0.000         0         0
+cli.azure.cli.core: These extensions are not installed and will be skipped: ['azext_next']
+cli.azure.cli.core: Loading extensions:
+cli.azure.cli.core: Name                  Load Time    Groups  Commands  Directory
+cli.azure.cli.core.util: azure.cli.core.util.handle_exception is called with an exception:
+cli.azure.cli.core.util: Traceback (most recent call last):
+  File "/opt/az/lib/python3.6/site-packages/knack/cli.py", line 231, in invoke
+    cmd_result = self.invocation.execute(args)
+  File "/opt/az/lib/python3.6/site-packages/azure/cli/core/commands/__init__.py", line 512, in execute
+    self.commands_loader.load_command_table(args)
+  File "/opt/az/lib/python3.6/site-packages/azure/cli/core/__init__.py", line 420, in load_command_table
+    _update_command_table_from_extensions([], index_extensions)
+  File "/opt/az/lib/python3.6/site-packages/azure/cli/core/__init__.py", line 330, in _update_command_table_from_extensions
+    check_version_compatibility(ext.get_metadata())
+  File "/opt/az/lib/python3.6/site-packages/azure/cli/core/extension/__init__.py", line 154, in get_metadata
+    azext_metadata = WheelExtension.get_azext_metadata(ext_dir)
+  File "/opt/az/lib/python3.6/site-packages/azure/cli/core/extension/__init__.py", line 184, in get_azext_metadata
+    azext_metadata = json.load(f)
+  File "/opt/az/lib/python3.6/json/__init__.py", line 299, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/opt/az/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/opt/az/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/az/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+cli.azure.cli.core.azclierror: The command failed with an unexpected error. Here is the traceback:
+az_command_data_logger: The command failed with an unexpected error. Here is the traceback:
+cli.azure.cli.core.azclierror: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/opt/az/lib/python3.6/site-packages/knack/cli.py", line 231, in invoke
+    cmd_result = self.invocation.execute(args)
+  File "/opt/az/lib/python3.6/site-packages/azure/cli/core/commands/__init__.py", line 512, in execute
+    self.commands_loader.load_command_table(args)
+  File "/opt/az/lib/python3.6/site-packages/azure/cli/core/__init__.py", line 420, in load_command_table
+    _update_command_table_from_extensions([], index_extensions)
+  File "/opt/az/lib/python3.6/site-packages/azure/cli/core/__init__.py", line 330, in _update_command_table_from_extensions
+    check_version_compatibility(ext.get_metadata())
+  File "/opt/az/lib/python3.6/site-packages/azure/cli/core/extension/__init__.py", line 154, in get_metadata
+    azext_metadata = WheelExtension.get_azext_metadata(ext_dir)
+  File "/opt/az/lib/python3.6/site-packages/azure/cli/core/extension/__init__.py", line 184, in get_azext_metadata
+    azext_metadata = json.load(f)
+  File "/opt/az/lib/python3.6/json/__init__.py", line 299, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/opt/az/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/opt/az/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/az/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+az_command_data_logger: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/opt/az/lib/python3.6/site-packages/knack/cli.py", line 231, in invoke
+    cmd_result = self.invocation.execute(args)
+  File "/opt/az/lib/python3.6/site-packages/azure/cli/core/commands/__init__.py", line 512, in execute
+    self.commands_loader.load_command_table(args)
+  File "/opt/az/lib/python3.6/site-packages/azure/cli/core/__init__.py", line 420, in load_command_table
+    _update_command_table_from_extensions([], index_extensions)
+  File "/opt/az/lib/python3.6/site-packages/azure/cli/core/__init__.py", line 330, in _update_command_table_from_extensions
+    check_version_compatibility(ext.get_metadata())
+  File "/opt/az/lib/python3.6/site-packages/azure/cli/core/extension/__init__.py", line 154, in get_metadata
+    azext_metadata = WheelExtension.get_azext_metadata(ext_dir)
+  File "/opt/az/lib/python3.6/site-packages/azure/cli/core/extension/__init__.py", line 184, in get_azext_metadata
+    azext_metadata = json.load(f)
+  File "/opt/az/lib/python3.6/json/__init__.py", line 299, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/opt/az/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/opt/az/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/az/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+To open an issue, please run: 'az feedback'
+cli.knack.cli: Event: Cli.PostExecute [<function AzCliLogging.deinit_cmd_metadata_logging at 0x7fde6d068bf8>]
+cli.__main__: Command ran in 0.501 seconds (init: 0.149, invoke: 0.352)
+telemetry.save: Save telemetry record of length 6195 in cache
+telemetry.check: Negative: The /home/manoj/.azure/telemetry.txt was modified at 2021-05-05 04:30:07.019645, which in less than 600.000000 s
+manoj@Azure:~/clouddrive/repos/AzureML/v2/hello_python_world_local_component$
+
