@@ -1,0 +1,21 @@
+type: command_component
+
+name: HelloWorldPython
+display_name: HelloWorldPythonDisplay
+version: 1
+
+inputs:
+  sample_data:
+    type: path
+  sample_string:
+    type: string
+    default: hello yaml world
+
+code:
+  local_path: ./src
+
+command: >-
+  python hello.py --sample_input_data {inputs.sample_data} --sample_input_string {inputs.sample_string}
+
+environment: azureml:AzureML-Minimal:1
+

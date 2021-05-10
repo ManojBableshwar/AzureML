@@ -1,0 +1,19 @@
+type: pipeline_job
+
+#compute:
+#  target: azureml:ManojCluster
+
+inputs:
+  pipeline_sample_data: azureml:sampledata1
+  pipeline_sample_string: "hello"
+
+jobs:
+  hello_world_component_1:
+    type: component_job
+    compute:
+      target: azureml:ManojCluster
+    component: file:./helloworld_component_python.yml
+    inputs:
+      sample_data: inputs.pipeline_sample_data
+      sample_string: inputs.pipeline_sample_string
+
