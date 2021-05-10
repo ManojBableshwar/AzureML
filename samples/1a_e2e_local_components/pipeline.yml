@@ -24,14 +24,15 @@ outputs:
       path: /report
 
 defaults:
-  datastore: azureml:workspaceblobstore
+  component_job:
+    datastore: azureml:workspaceblobstore
+    compute:
+      target: ManojCluster
 
 jobs:
   train-job:
     type: component_job
     component: file:./train.yml
-    compute:
-      target: azureml:ManojCluster
     inputs:
       training_data: inputs.pipeline_job_training_input
       max_epocs: inputs.pipeline_job_training_max_epocs
@@ -43,8 +44,6 @@ jobs:
   score-job:
     type: component_job
     component: file:./score.yml
-    compute:
-      target: azureml:ManojCluster
     inputs:
       model_input: jobs.train-job.outputs.model_output
       test_data: inputs.pipeline_job_test_input
@@ -54,8 +53,6 @@ jobs:
   evaluate-job:
     type: component_job
     component: file:./eval.yml
-    compute:
-      target: azureml:ManojCluster
     inputs:
       scoring_result: jobs.score-job.outputs.score_output
     outputs:

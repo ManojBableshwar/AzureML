@@ -1,6 +1,6 @@
-name: Evaluate
+name: Eval
 version: 10
-display_name: Evaluate
+display_name: Eval
 type: command_component
 inputs:
   scoring_result:

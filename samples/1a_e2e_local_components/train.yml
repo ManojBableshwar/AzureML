@@ -1,6 +1,6 @@
 name: Train
-version: 10
 display_name: Train
+version: 10
 type: command_component
 inputs:
   training_data: 
