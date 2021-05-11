@@ -46,9 +46,11 @@ version: 1
 inputs:
   sample_input_data:
     type: path
+    description: "This component lists and prints the content of files in this folder"
   sample_input_string:
     type: string
     default: "hello_python_world"
+    description: "This component writes a text file with current time to this folder"
 
 outputs:
   sample_output_data:
@@ -133,9 +135,10 @@ Components make Pipelines composable and reusable and promote collabaration by:
 * Registering with the workspace so that users and search and find something they want to reuse.
 * Supporting versioning so that authors make informed updates while letting users to use prior versions or switch to new versions as per their preferences.
 
-As next steps:
-* Learn how to run multiple components with data dependencies between them in Pipeline Jobs.
-* More component types: Sweep Component.
+Next steps:
+* Learn how to run multiple components with data dependencies between them in Pipeline Jobs - link tbd
+* Explore more component types - link tbd
+* Review the `Command Component` schema to understand the exhaustive list of fields supported: https://azuremlsdk2.blob.core.windows.net/latest/commandComponent.schema.json
 
 
 

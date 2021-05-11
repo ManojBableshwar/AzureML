@@ -3,19 +3,20 @@ Register a component with the `az ml component create --file <your_component.yml
 
 ```
 manoj@Azure:~/clouddrive/repos/AzureML/samples/2c_registered_component$ az ml component create --file component.yml
-Command group 'ml component' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus
 {
-  "code": "azureml:/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/codes/0c90c1e6-51f5-4c54-9850-91df8fe6d22c/versions/1",
+  "code": "azureml:/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/codes/0c8234ea-6ae4-48cc-8f5f-fd9383320013/versions/1",
   "command": "python hello.py  --input_data {inputs.sample_input_data}  --input_string {inputs.sample_input_string}  --output_data {outputs.sample_output_data}",
   "display_name": "Hello_Python_World",
-  "environment": "azureml:/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/environments/434860c0-995e-4590-9e6c-ef7d232834cf/versions/1",
+  "environment": "azureml:/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/environments/d2401286-606a-4fbf-900c-72a4eb736178/versions/1",
   "inputs": {
     "sample_input_data": {
+      "description": "This component lists and prints the content of files in this folder",
       "optional": false,
       "type": "path"
     },
     "sample_input_string": {
       "default": "hello_python_world",
+      "description": "This component writes a text file with current time to this folder",
       "optional": false,
       "type": "string"
     }
@@ -45,11 +46,13 @@ Command group 'ml component' is experimental and under development. Reference an
   "environment": "azureml:/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/environments/434860c0-995e-4590-9e6c-ef7d232834cf/versions/1",
   "inputs": {
     "sample_input_data": {
+      "description": "This component lists and prints the content of files in this folder",
       "optional": false,
       "type": "path"
     },
     "sample_input_string": {
       "default": "hello_python_world",
+      "description": "This component writes a text file with current time to this folder",
       "optional": false,
       "type": "string"
     }
@@ -89,11 +92,13 @@ Command group 'ml component' is experimental and under development. Reference an
   "environment": "azureml:/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/environments/1b95a1d5-b988-4fd2-8180-8505aedf9bc2/versions/1",
   "inputs": {
     "sample_input_data": {
+      "description": "This component lists and prints the content of files in this folder",
       "optional": false,
       "type": "path"
     },
     "sample_input_string": {
       "default": "hello_python_world",
+      "description": "This component writes a text file with current time to this folder",
       "optional": false,
       "type": "string"
     }
