@@ -7,10 +7,10 @@ jobs:
   componentA_job:
     type: component_job
     component: file:./componentA.yml
-  componentA_job:
+  componentB_job:
     type: component_job
     component: file:./componentB.yml
-  componentA_job:
+  componentC_job:
     type: component_job
     component: file:./componentC.yml
 
