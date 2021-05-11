@@ -39,6 +39,7 @@ az config set defaults.group="<your_workspace_resource_group>"
 ```
 cd $HOME
 mkdir repos
+cd repos
 git clone https://github.com/ManojBableshwar/AzureML.git
 ```
 
