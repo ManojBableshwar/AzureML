@@ -1,29 +1,35 @@
 
-This is a simple pipeline with 3 Component Jobs. There are no dependencies between these jobs, hence they all run concurrently.
+This is a simple pipeline with 3 Component Jobs with data dependencies.
  
 ```
-manoj@Azure:~/clouddrive/repos/AzureML/samples/3a_basic_pipeline$ az ml job create --file pipeline.yml
+manoj@Azure:~/clouddrive/repos/AzureML/samples/3b_pipline_with_data$ az ml job create --file pipeline.yml
 Command group 'ml job' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus
-Uploading componentC_src: 100%|███████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 4609.13it/s]
-Custom pipeline job names are not supported yet. Please refer to the created pipeline job using the name: 85659153-69e8-4d48-98aa-64a2c5beaf36
+Uploading componentB_src: 100%|███████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 4544.21it/s]
+Uploading componentC_src: 100%|███████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 5793.24it/s]
+Custom pipeline job names are not supported yet. Please refer to the created pipeline job using the name: 4729d3c6-859c-4f45-b412-f08f78b98695
 {
   "compute": {
     "target": "azureml:cpu-cluster"
   },
   "creation_context": {
-    "created_at": "2021-05-11T21:33:00.653067+00:00",
+    "created_at": "2021-05-11T22:45:26.608595+00:00",
     "created_by": "Manoj Bableshwar",
     "created_by_type": "User"
   },
   "defaults": {
     "component_job": {}
   },
-  "experiment_name": "3a_basic_pipeline",
-  "id": "azureml:/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/jobs/85659153-69e8-4d48-98aa-64a2c5beaf36",
-  "inputs": {},
+  "experiment_name": "3b_pipline_with_data",
+  "id": "azureml:/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/jobs/4729d3c6-859c-4f45-b412-f08f78b98695",
+  "inputs": {
+    "pipeline_sample_input_data": {
+      "data": {},
+      "mode": "mount"
+    }
+  },
   "interaction_endpoints": {
     "Studio": {
-      "endpoint": "https://ml.azure.com/runs/85659153-69e8-4d48-98aa-64a2c5beaf36?wsid=/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourcegroups/OpenDatasetsPMRG/workspaces/OpenDatasetsPMWorkspace&tid=72f988bf-86f1-41af-91ab-2d7cd011db47"
+      "endpoint": "https://ml.azure.com/runs/4729d3c6-859c-4f45-b412-f08f78b98695?wsid=/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourcegroups/OpenDatasetsPMRG/workspaces/OpenDatasetsPMWorkspace&tid=72f988bf-86f1-41af-91ab-2d7cd011db47"
     },
     "Tracking": {
       "endpoint": "azureml://eastus2.api.azureml.ms/mlflow/v1.0/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace?"
@@ -31,68 +37,66 @@ Custom pipeline job names are not supported yet. Please refer to the created pip
   },
   "jobs": {
     "componentA_job": {
-      "component": "azureml:1f62a17e-701e-4c19-b6cc-a216a0ed6b03:1",
-      "inputs": {},
-      "outputs": {},
+      "component": "azureml:0b1f9d1f-40da-4ff1-964d-a11e2e3e6113:1",
+      "inputs": {
+        "componentA_input": "inputs.pipeline_sample_input_data"
+      },
+      "outputs": {
+        "componentA_output": {}
+      },
       "type": "component_job"
-    }
-  },
-  "name": "85659153-69e8-4d48-98aa-64a2c5beaf36",
-  "outputs": {},
-  "properties": {
-    "azureml.parameters": "{}",
-    "azureml.runsource": "azureml.PipelineRun",
-    "runSource": "MFE",
-    "runType": "HTTP"
-  },
-  "resourceGroup": "OpenDatasetsPMRG",
-  "status": "Preparing",
-  "tags": {
-    "azureml.pipelineComponent": "pipelinerun"
-  },
-  "type": "pipeline_job"
-}
-```
-
-If your workspace has a different Compute Cluster then you can either edit the pipeline.yml file to update it or set the compute on the command line with `az ml job create --file <your_pipeline.yml> --set compute.target=<your_cluster>` syntax as shown below.
-
-```
-manoj@Azure:~/clouddrive/repos/AzureML/samples/3a_basic_pipeline$ az ml job create --file pipeline.yml --set compute.target=ManojCluster
-Command group 'ml job' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus
-Custom pipeline job names are not supported yet. Please refer to the created pipeline job using the name: 1822aff6-f0ce-4e6e-863a-f46856feb15e
-{
-  "compute": {
-    "target": "azureml:ManojCluster"
-  },
-  "creation_context": {
-    "created_at": "2021-05-11T21:36:12.844694+00:00",
-    "created_by": "Manoj Bableshwar",
-    "created_by_type": "User"
-  },
-  "defaults": {
-    "component_job": {}
-  },
-  "experiment_name": "3a_basic_pipeline",
-  "id": "azureml:/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/jobs/1822aff6-f0ce-4e6e-863a-f46856feb15e",
-  "inputs": {},
-  "interaction_endpoints": {
-    "Studio": {
-      "endpoint": "https://ml.azure.com/runs/1822aff6-f0ce-4e6e-863a-f46856feb15e?wsid=/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourcegroups/OpenDatasetsPMRG/workspaces/OpenDatasetsPMWorkspace&tid=72f988bf-86f1-41af-91ab-2d7cd011db47"
     },
-    "Tracking": {
-      "endpoint": "azureml://eastus2.api.azureml.ms/mlflow/v1.0/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace?"
-    }
-  },
-  "jobs": {
-    "componentA_job": {
-      "component": "azureml:591bc09d-7d16-45e8-9618-45e04e0dee3c:1",
-      "inputs": {},
-      "outputs": {},
+    "componentB_job": {
+      "component": "azureml:51c59ed1-49b1-44e9-8ad0-05154033db46:1",
+      "inputs": {
+        "componentB_input": "jobs.componentA_job.outputs.componentA_output"
+      },
+      "outputs": {
+        "componentB_output": {}
+      },
+      "type": "component_job"
+    },
+    "componentC_job": {
+      "component": "azureml:793c5f63-7e10-4bd6-912f-23b74ce98e70:1",
+      "inputs": {
+        "componentC_input": "jobs.componentB_job.outputs.componentB_output"
+      },
+      "outputs": {
+        "componentC_output": {}
+      },
       "type": "component_job"
     }
   },
-  "name": "1822aff6-f0ce-4e6e-863a-f46856feb15e",
-  "outputs": {},
+  "name": "4729d3c6-859c-4f45-b412-f08f78b98695",
+  "outputs": {
+    "pipeline_sample_output_data_A": {
+      "data": {
+        "datastore": "azureml:workspaceblobstore",
+        "name": "7084ad1c-ca9a-4921-984a-d7412c1893ba",
+        "path": "/simple_pipeline_A",
+        "version": 1
+      },
+      "mode": "mount"
+    },
+    "pipeline_sample_output_data_B": {
+      "data": {
+        "datastore": "azureml:workspaceblobstore",
+        "name": "ac62018b-86ea-4264-a3c0-4301c77d4885",
+        "path": "/simple_pipeline_B",
+        "version": 1
+      },
+      "mode": "mount"
+    },
+    "pipeline_sample_output_data_C": {
+      "data": {
+        "datastore": "azureml:workspaceblobstore",
+        "name": "e445eac3-84d3-4aa2-a1e3-fa374b57366d",
+        "path": "/simple_pipeline_C",
+        "version": 1
+      },
+      "mode": "mount"
+    }
+  },
   "properties": {
     "azureml.parameters": "{}",
     "azureml.runsource": "azureml.PipelineRun",
