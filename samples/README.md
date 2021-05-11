@@ -32,7 +32,9 @@ az config set defaults.group="<your_workspace_resource_group>"
 
 5. Make sure your setup is working with either of the list commands: `az ml compute list`, `az ml jobs list`, or `az ml data list`
 
-6. Clone this samples repo: 
+6. Enable private preview features: `export AZURE_ML_CLI_PRIVATE_FEATURES_ENABLED="true"`
+
+7. Clone this samples repo: 
 
 ```
 cd $HOME
