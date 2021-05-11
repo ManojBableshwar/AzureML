@@ -5,5 +5,5 @@ jobs:
     type: component_job
     component: file:./component.yml
     compute:
-      target: azureml:ManojCluster
+      target: azureml:cpu-cluster
 
