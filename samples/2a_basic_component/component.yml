@@ -9,7 +9,7 @@ code:
 
 environment: 
   docker: 
-    image: docker.io/python
+    image: docker.io/ubuntu
 
 command: >-
   python hello.py
