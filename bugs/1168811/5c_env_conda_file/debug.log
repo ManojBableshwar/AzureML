@@ -2,7 +2,7 @@ DEBUG: cli.knack.cli: Command arguments: ['ml', 'job', 'create', '--file', 'pipe
 DEBUG: cli.knack.cli: __init__ debug log:
 Cannot enable color.
 DEBUG: cli.knack.cli: Event: Cli.PreExecute []
-DEBUG: cli.knack.cli: Event: CommandParser.OnGlobalArgumentsCreate [<function CLILogging.on_global_arguments at 0x7f005d33dc80>, <function OutputProducer.on_global_arguments at 0x7f005d273730>, <function CLIQuery.on_global_arguments at 0x7f005d28b840>]
+DEBUG: cli.knack.cli: Event: CommandParser.OnGlobalArgumentsCreate [<function CLILogging.on_global_arguments at 0x7fda4bf00c80>, <function OutputProducer.on_global_arguments at 0x7fda4be36730>, <function CLIQuery.on_global_arguments at 0x7fda4be4e840>]
 DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreCommandTableCreate []
 DEBUG: cli.azure.cli.core: Modules found from index for 'ml': ['azext_mlv2']
 DEBUG: cli.azure.cli.core: Loading command modules:
@@ -11,24 +11,24 @@ DEBUG: cli.azure.cli.core: Total (0)                 0.000         0         0
 DEBUG: cli.azure.cli.core: These extensions are not installed and will be skipped: ['azext_next']
 DEBUG: cli.azure.cli.core: Loading extensions:
 DEBUG: cli.azure.cli.core: Name                  Load Time    Groups  Commands  Directory
-DEBUG: cli.azure.cli.core: ml                        0.700        11        62  /home/manoj/.azure/cliextensions/ml
-DEBUG: cli.azure.cli.core: ai-examples               0.164         1         1  /opt/az/lib/python3.6/site-packages/azure-cli-extensions/ai-examples
-DEBUG: cli.azure.cli.core: Total (2)                 0.864        12        63  
+DEBUG: cli.azure.cli.core: ml                        0.706        11        62  /home/manoj/.azure/cliextensions/ml
+DEBUG: cli.azure.cli.core: ai-examples               0.166         1         1  /opt/az/lib/python3.6/site-packages/azure-cli-extensions/ai-examples
+DEBUG: cli.azure.cli.core: Total (2)                 0.872        12        63  
 DEBUG: cli.azure.cli.core: Loaded 12 groups, 63 commands.
 DEBUG: cli.azure.cli.core: Found a match in the command table.
 DEBUG: cli.azure.cli.core: Raw command  : ml job create
 DEBUG: cli.azure.cli.core: Command table: ml job create
-DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreCommandTableTruncate [<function AzCliLogging.init_command_file_logging at 0x7f005cdb4f28>]
-DEBUG: cli.azure.cli.core.azlogging: metadata file logging enabled - writing logs to '/home/manoj/.azure/commands/2021-05-13.21-24-22.ml_job_create.211.log'.
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreCommandTableTruncate [<function AzCliLogging.init_command_file_logging at 0x7fda4b977f28>]
+DEBUG: cli.azure.cli.core.azlogging: metadata file logging enabled - writing logs to '/home/manoj/.azure/commands/2021-05-13.21-33-46.ml_job_create.364.log'.
 INFO: az_command_data_logger: command args: ml job create --file {} --debug
-DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreArgumentLoad [<function register_global_subscription_argument.<locals>.add_subscription_parameter at 0x7f005cddaf28>, <function register_global_query_examples_argument.<locals>.register_query_examples at 0x7f005ccf8048>]
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreArgumentLoad [<function register_global_subscription_argument.<locals>.add_subscription_parameter at 0x7fda4b99df28>, <function register_global_query_examples_argument.<locals>.register_query_examples at 0x7fda4b8bb048>]
 INFO: cli.knack.commands: Configured default 'OpenDatasetsPMRG' for arg resource_group_name
 INFO: cli.knack.commands: Configured default 'OpenDatasetsPMWorkspace' for arg workspace_name
 DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostArgumentLoad []
-DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostCommandTableCreate [<function register_ids_argument.<locals>.add_ids_arguments at 0x7f005ccf80d0>, <function register_cache_arguments.<locals>.add_cache_arguments at 0x7f005ccf81e0>]
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostCommandTableCreate [<function register_ids_argument.<locals>.add_ids_arguments at 0x7fda4b8bb0d0>, <function register_cache_arguments.<locals>.add_cache_arguments at 0x7fda4b8bb1e0>]
 DEBUG: cli.knack.cli: Event: CommandInvoker.OnCommandTableLoaded []
 DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreParseArgs []
-DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostParseArgs [<function OutputProducer.handle_output_argument at 0x7f005d2737b8>, <function CLIQuery.handle_query_parameter at 0x7f005d28b8c8>, <function register_global_query_examples_argument.<locals>.handle_example_parameter at 0x7f005ccebf28>, <function register_ids_argument.<locals>.parse_ids_arguments at 0x7f005ccf8158>]
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostParseArgs [<function OutputProducer.handle_output_argument at 0x7fda4be367b8>, <function CLIQuery.handle_query_parameter at 0x7fda4be4e8c8>, <function register_global_query_examples_argument.<locals>.handle_example_parameter at 0x7fda4b8aef28>, <function register_ids_argument.<locals>.parse_ids_arguments at 0x7fda4b8bb158>]
 INFO: az_command_data_logger: extension name: ml
 INFO: az_command_data_logger: extension version: 0.0.79
 WARNING: Command group 'ml job' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus
@@ -38,7 +38,7 @@ DEBUG: azure.core.pipeline.policies._universal: Request URL: 'https://management
 DEBUG: azure.core.pipeline.policies._universal: Request method: 'GET'
 DEBUG: azure.core.pipeline.policies._universal: Request headers:
 DEBUG: azure.core.pipeline.policies._universal:     'Accept': 'application/json'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '95e80450-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': 'e658cc52-b432-11eb-84a4-0a580af4bc60'
 DEBUG: azure.core.pipeline.policies._universal:     'User-Agent': 'azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.6.10 (Linux-4.15.0-1113-azure-x86_64-with-debian-10.2) cloud-shell/1.0'
 DEBUG: azure.core.pipeline.policies._universal:     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL21hbmFnZW1lbnQuY29yZS53aW5kb3dzLm5ldC8iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC83MmY5ODhiZi04NmYxLTQxYWYtOTFhYi0yZDdjZDAxMWRiNDcvIiwiaWF0IjoxNjIwOTQwMTc1LCJuYmYiOjE2MjA5NDAxNzUsImV4cCI6MTYyMDk0NDA3NSwiX2NsYWltX25hbWVzIjp7Imdyb3VwcyI6InNyYzEifSwiX2NsYWltX3NvdXJjZXMiOnsic3JjMSI6eyJlbmRwb2ludCI6Imh0dHBzOi8vZ3JhcGgud2luZG93cy5uZXQvNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3L3VzZXJzLzgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYi9nZXRNZW1iZXJPYmplY3RzIn19LCJhY3IiOiIxIiwiYWlvIjoiQVZRQXEvOFRBQUFBdTJiL2lTUnh0TEgyTWJVRTlnS2RhZFdLMzBlV2x2bGlwMjlZc1JtOHFDRTd0eVVIaGdOTlZyK2JyWlpXL2Qxa21HOTVPYmE4ZEhMTTh4YjJEZ1Nld0V4U2M4b0xkSVVtSmJoQm9zWFpIOTA9IiwiYW1yIjpbIndpYSIsIm1mYSJdLCJhcHBpZCI6ImM0NGI0MDgzLTNiYjAtNDljMS1iNDdkLTk3NGU1M2NiZGYzYyIsImFwcGlkYWNyIjoiMiIsImRldmljZWlkIjoiOWVlYjhkNGUtNWQ4Yi00ZmY1LTk4NzYtNGFjNDQ3NjY5YjVlIiwiZmFtaWx5X25hbWUiOiJCYWJsZXNod2FyIiwiZ2l2ZW5fbmFtZSI6Ik1hbm9qIiwiaXBhZGRyIjoiMjA3LjExNS42Ni4yNDYiLCJuYW1lIjoiTWFub2ogQmFibGVzaHdhciIsIm9pZCI6IjgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYiIsIm9ucHJlbV9zaWQiOiJTLTEtNS0yMS0yMTQ2NzczMDg1LTkwMzM2MzI4NS03MTkzNDQ3MDctMTYxODQ0MyIsInB1aWQiOiIxMDAzMDAwMDg1RDNEMDVGIiwicmgiOiIwLkFSb0F2NGo1Y3ZHR3IwR1JxeTE4MEJIYlI0TkFTOFN3TzhGSnRIMlhUbFBMM3p3YUFKdy4iLCJzY3AiOiJ1c2VyX2ltcGVyc29uYXRpb24iLCJzdWIiOiJRZjJDbjU5ZUMtNlJyQ1pZR2t3ajYzRkZwQ3dtbWViVWQ0MEt0d01Calk4IiwidGlkIjoiNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3IiwidW5pcXVlX25hbWUiOiJtYWJhYmxlc0BtaWNyb3NvZnQuY29tIiwidXBuIjoibWFiYWJsZXNAbWljcm9zb2Z0LmNvbSIsInV0aSI6IjdBWG53Ukk1UTBlc0plRUY2VjE2QUEiLCJ2ZXIiOiIxLjAiLCJ4bXNfdGNkdCI6MTI4OTI0MTU0N30.Ih8iTv1gCDkq1UfxdhRStUxFx9VBOPfW0wRzW5r_aPut3tGt6XfBaGTtjclBGfeyksvIBLyczW-BOL2dKQsXrB5dWC01WHovu18CU-j3nU4zKkkbpOuFTzPuZ1NPCEpBJDljy1COck4dcXaGR-Pp6uR9xOa4DkvfjDlwcDWWC0obEjAs0eYx4bJNv8TI5L6fp5j2RK0f4lTAtsPZSgWqk9NcF4KhSrDzSM9_f3AOexL6WQBtM_J9TKM6GkhJewjvUvE_mpe7aDkrrKQcsThmqrT0aOTSJr281kvz17R8IcAT1Or2-7L5n8mYZ4YQ2W0oM3iqeMieUJyD9o5ux0J0MA'
 DEBUG: azure.core.pipeline.policies._universal: Request body:
@@ -54,18 +54,18 @@ DEBUG: azure.core.pipeline.policies._universal:     'Content-Type': 'application
 DEBUG: azure.core.pipeline.policies._universal:     'Content-Encoding': 'gzip'
 DEBUG: azure.core.pipeline.policies._universal:     'Expires': '-1'
 DEBUG: azure.core.pipeline.policies._universal:     'Vary': 'Accept-Encoding,Accept-Encoding'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-request-id': '523f8b60-8be2-46bd-b5f1-526dd59a08f2'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-ratelimit-remaining-subscription-reads': '11998'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-request-id': '368bcc1c-5c59-47b7-8d01-da0fdd1d083e'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-ratelimit-remaining-subscription-reads': '11995'
 DEBUG: azure.core.pipeline.policies._universal:     'Request-Context': 'appId=cid-v1:2d2e8e63-272e-4b3c-8598-4ee570a0e70d'
 DEBUG: azure.core.pipeline.policies._universal:     'x-ms-response-type': 'standard'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '95e80450-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': 'e658cc52-b432-11eb-84a4-0a580af4bc60'
 DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-session-id': ''
 DEBUG: azure.core.pipeline.policies._universal:     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
 DEBUG: azure.core.pipeline.policies._universal:     'X-Content-Type-Options': 'nosniff'
-DEBUG: azure.core.pipeline.policies._universal:     'x-request-time': '1.744'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-correlation-request-id': '523f8b60-8be2-46bd-b5f1-526dd59a08f2'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-routing-request-id': 'WESTUS:20210513T212425Z:523f8b60-8be2-46bd-b5f1-526dd59a08f2'
-DEBUG: azure.core.pipeline.policies._universal:     'Date': 'Thu, 13 May 2021 21:24:25 GMT'
+DEBUG: azure.core.pipeline.policies._universal:     'x-request-time': '0.109'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-correlation-request-id': '368bcc1c-5c59-47b7-8d01-da0fdd1d083e'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-routing-request-id': 'WESTUS:20210513T213348Z:368bcc1c-5c59-47b7-8d01-da0fdd1d083e'
+DEBUG: azure.core.pipeline.policies._universal:     'Date': 'Thu, 13 May 2021 21:33:48 GMT'
 DEBUG: azure.core.pipeline.policies._universal: Response content:
 DEBUG: azure.core.pipeline.policies._universal: {
   "value": [
@@ -102,7 +102,7 @@ DEBUG: azure.core.pipeline.policies._universal: Request URL: 'https://management
 DEBUG: azure.core.pipeline.policies._universal: Request method: 'GET'
 DEBUG: azure.core.pipeline.policies._universal: Request headers:
 DEBUG: azure.core.pipeline.policies._universal:     'Accept': 'application/json'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '97b2a40c-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': 'e722c5fc-b432-11eb-84a4-0a580af4bc60'
 DEBUG: azure.core.pipeline.policies._universal:     'User-Agent': 'azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.6.10 (Linux-4.15.0-1113-azure-x86_64-with-debian-10.2) cloud-shell/1.0'
 DEBUG: azure.core.pipeline.policies._universal:     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL21hbmFnZW1lbnQuY29yZS53aW5kb3dzLm5ldC8iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC83MmY5ODhiZi04NmYxLTQxYWYtOTFhYi0yZDdjZDAxMWRiNDcvIiwiaWF0IjoxNjIwOTQwMTc1LCJuYmYiOjE2MjA5NDAxNzUsImV4cCI6MTYyMDk0NDA3NSwiX2NsYWltX25hbWVzIjp7Imdyb3VwcyI6InNyYzEifSwiX2NsYWltX3NvdXJjZXMiOnsic3JjMSI6eyJlbmRwb2ludCI6Imh0dHBzOi8vZ3JhcGgud2luZG93cy5uZXQvNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3L3VzZXJzLzgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYi9nZXRNZW1iZXJPYmplY3RzIn19LCJhY3IiOiIxIiwiYWlvIjoiQVZRQXEvOFRBQUFBdTJiL2lTUnh0TEgyTWJVRTlnS2RhZFdLMzBlV2x2bGlwMjlZc1JtOHFDRTd0eVVIaGdOTlZyK2JyWlpXL2Qxa21HOTVPYmE4ZEhMTTh4YjJEZ1Nld0V4U2M4b0xkSVVtSmJoQm9zWFpIOTA9IiwiYW1yIjpbIndpYSIsIm1mYSJdLCJhcHBpZCI6ImM0NGI0MDgzLTNiYjAtNDljMS1iNDdkLTk3NGU1M2NiZGYzYyIsImFwcGlkYWNyIjoiMiIsImRldmljZWlkIjoiOWVlYjhkNGUtNWQ4Yi00ZmY1LTk4NzYtNGFjNDQ3NjY5YjVlIiwiZmFtaWx5X25hbWUiOiJCYWJsZXNod2FyIiwiZ2l2ZW5fbmFtZSI6Ik1hbm9qIiwiaXBhZGRyIjoiMjA3LjExNS42Ni4yNDYiLCJuYW1lIjoiTWFub2ogQmFibGVzaHdhciIsIm9pZCI6IjgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYiIsIm9ucHJlbV9zaWQiOiJTLTEtNS0yMS0yMTQ2NzczMDg1LTkwMzM2MzI4NS03MTkzNDQ3MDctMTYxODQ0MyIsInB1aWQiOiIxMDAzMDAwMDg1RDNEMDVGIiwicmgiOiIwLkFSb0F2NGo1Y3ZHR3IwR1JxeTE4MEJIYlI0TkFTOFN3TzhGSnRIMlhUbFBMM3p3YUFKdy4iLCJzY3AiOiJ1c2VyX2ltcGVyc29uYXRpb24iLCJzdWIiOiJRZjJDbjU5ZUMtNlJyQ1pZR2t3ajYzRkZwQ3dtbWViVWQ0MEt0d01Calk4IiwidGlkIjoiNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3IiwidW5pcXVlX25hbWUiOiJtYWJhYmxlc0BtaWNyb3NvZnQuY29tIiwidXBuIjoibWFiYWJsZXNAbWljcm9zb2Z0LmNvbSIsInV0aSI6IjdBWG53Ukk1UTBlc0plRUY2VjE2QUEiLCJ2ZXIiOiIxLjAiLCJ4bXNfdGNkdCI6MTI4OTI0MTU0N30.Ih8iTv1gCDkq1UfxdhRStUxFx9VBOPfW0wRzW5r_aPut3tGt6XfBaGTtjclBGfeyksvIBLyczW-BOL2dKQsXrB5dWC01WHovu18CU-j3nU4zKkkbpOuFTzPuZ1NPCEpBJDljy1COck4dcXaGR-Pp6uR9xOa4DkvfjDlwcDWWC0obEjAs0eYx4bJNv8TI5L6fp5j2RK0f4lTAtsPZSgWqk9NcF4KhSrDzSM9_f3AOexL6WQBtM_J9TKM6GkhJewjvUvE_mpe7aDkrrKQcsThmqrT0aOTSJr281kvz17R8IcAT1Or2-7L5n8mYZ4YQ2W0oM3iqeMieUJyD9o5ux0J0MA'
 DEBUG: azure.core.pipeline.policies._universal: Request body:
@@ -117,18 +117,18 @@ DEBUG: azure.core.pipeline.policies._universal:     'Content-Type': 'application
 DEBUG: azure.core.pipeline.policies._universal:     'Content-Encoding': 'gzip'
 DEBUG: azure.core.pipeline.policies._universal:     'Expires': '-1'
 DEBUG: azure.core.pipeline.policies._universal:     'Vary': 'Accept-Encoding,Accept-Encoding'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-request-id': 'd991bde8-7c71-4a69-8a5e-91208e5b6d07'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-ratelimit-remaining-subscription-reads': '11997'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-request-id': 'a56099e0-08c2-4bc3-ac91-6ce94f3b4e3e'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-ratelimit-remaining-subscription-reads': '11994'
 DEBUG: azure.core.pipeline.policies._universal:     'Request-Context': 'appId=cid-v1:2d2e8e63-272e-4b3c-8598-4ee570a0e70d'
 DEBUG: azure.core.pipeline.policies._universal:     'x-ms-response-type': 'standard'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '97b2a40c-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': 'e722c5fc-b432-11eb-84a4-0a580af4bc60'
 DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-session-id': ''
 DEBUG: azure.core.pipeline.policies._universal:     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
 DEBUG: azure.core.pipeline.policies._universal:     'X-Content-Type-Options': 'nosniff'
-DEBUG: azure.core.pipeline.policies._universal:     'x-request-time': '0.254'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-correlation-request-id': 'd991bde8-7c71-4a69-8a5e-91208e5b6d07'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-routing-request-id': 'WESTUS:20210513T212425Z:d991bde8-7c71-4a69-8a5e-91208e5b6d07'
-DEBUG: azure.core.pipeline.policies._universal:     'Date': 'Thu, 13 May 2021 21:24:25 GMT'
+DEBUG: azure.core.pipeline.policies._universal:     'x-request-time': '0.176'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-correlation-request-id': 'a56099e0-08c2-4bc3-ac91-6ce94f3b4e3e'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-routing-request-id': 'WESTUS:20210513T213348Z:a56099e0-08c2-4bc3-ac91-6ce94f3b4e3e'
+DEBUG: azure.core.pipeline.policies._universal:     'Date': 'Thu, 13 May 2021 21:33:48 GMT'
 DEBUG: azure.core.pipeline.policies._universal: Response content:
 DEBUG: azure.core.pipeline.policies._universal: {
   "id": "/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/datastores/workspaceblobstore",
@@ -161,7 +161,7 @@ DEBUG: azure.core.pipeline.policies._universal: Request URL: 'https://management
 DEBUG: azure.core.pipeline.policies._universal: Request method: 'POST'
 DEBUG: azure.core.pipeline.policies._universal: Request headers:
 DEBUG: azure.core.pipeline.policies._universal:     'Accept': 'application/json'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '97e6e3e8-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': 'e74b4c52-b432-11eb-84a4-0a580af4bc60'
 DEBUG: azure.core.pipeline.policies._universal:     'User-Agent': 'azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.6.10 (Linux-4.15.0-1113-azure-x86_64-with-debian-10.2) cloud-shell/1.0'
 DEBUG: azure.core.pipeline.policies._universal:     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL21hbmFnZW1lbnQuY29yZS53aW5kb3dzLm5ldC8iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC83MmY5ODhiZi04NmYxLTQxYWYtOTFhYi0yZDdjZDAxMWRiNDcvIiwiaWF0IjoxNjIwOTQwMTc1LCJuYmYiOjE2MjA5NDAxNzUsImV4cCI6MTYyMDk0NDA3NSwiX2NsYWltX25hbWVzIjp7Imdyb3VwcyI6InNyYzEifSwiX2NsYWltX3NvdXJjZXMiOnsic3JjMSI6eyJlbmRwb2ludCI6Imh0dHBzOi8vZ3JhcGgud2luZG93cy5uZXQvNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3L3VzZXJzLzgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYi9nZXRNZW1iZXJPYmplY3RzIn19LCJhY3IiOiIxIiwiYWlvIjoiQVZRQXEvOFRBQUFBdTJiL2lTUnh0TEgyTWJVRTlnS2RhZFdLMzBlV2x2bGlwMjlZc1JtOHFDRTd0eVVIaGdOTlZyK2JyWlpXL2Qxa21HOTVPYmE4ZEhMTTh4YjJEZ1Nld0V4U2M4b0xkSVVtSmJoQm9zWFpIOTA9IiwiYW1yIjpbIndpYSIsIm1mYSJdLCJhcHBpZCI6ImM0NGI0MDgzLTNiYjAtNDljMS1iNDdkLTk3NGU1M2NiZGYzYyIsImFwcGlkYWNyIjoiMiIsImRldmljZWlkIjoiOWVlYjhkNGUtNWQ4Yi00ZmY1LTk4NzYtNGFjNDQ3NjY5YjVlIiwiZmFtaWx5X25hbWUiOiJCYWJsZXNod2FyIiwiZ2l2ZW5fbmFtZSI6Ik1hbm9qIiwiaXBhZGRyIjoiMjA3LjExNS42Ni4yNDYiLCJuYW1lIjoiTWFub2ogQmFibGVzaHdhciIsIm9pZCI6IjgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYiIsIm9ucHJlbV9zaWQiOiJTLTEtNS0yMS0yMTQ2NzczMDg1LTkwMzM2MzI4NS03MTkzNDQ3MDctMTYxODQ0MyIsInB1aWQiOiIxMDAzMDAwMDg1RDNEMDVGIiwicmgiOiIwLkFSb0F2NGo1Y3ZHR3IwR1JxeTE4MEJIYlI0TkFTOFN3TzhGSnRIMlhUbFBMM3p3YUFKdy4iLCJzY3AiOiJ1c2VyX2ltcGVyc29uYXRpb24iLCJzdWIiOiJRZjJDbjU5ZUMtNlJyQ1pZR2t3ajYzRkZwQ3dtbWViVWQ0MEt0d01Calk4IiwidGlkIjoiNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3IiwidW5pcXVlX25hbWUiOiJtYWJhYmxlc0BtaWNyb3NvZnQuY29tIiwidXBuIjoibWFiYWJsZXNAbWljcm9zb2Z0LmNvbSIsInV0aSI6IjdBWG53Ukk1UTBlc0plRUY2VjE2QUEiLCJ2ZXIiOiIxLjAiLCJ4bXNfdGNkdCI6MTI4OTI0MTU0N30.Ih8iTv1gCDkq1UfxdhRStUxFx9VBOPfW0wRzW5r_aPut3tGt6XfBaGTtjclBGfeyksvIBLyczW-BOL2dKQsXrB5dWC01WHovu18CU-j3nU4zKkkbpOuFTzPuZ1NPCEpBJDljy1COck4dcXaGR-Pp6uR9xOa4DkvfjDlwcDWWC0obEjAs0eYx4bJNv8TI5L6fp5j2RK0f4lTAtsPZSgWqk9NcF4KhSrDzSM9_f3AOexL6WQBtM_J9TKM6GkhJewjvUvE_mpe7aDkrrKQcsThmqrT0aOTSJr281kvz17R8IcAT1Or2-7L5n8mYZ4YQ2W0oM3iqeMieUJyD9o5ux0J0MA'
 DEBUG: azure.core.pipeline.policies._universal: Request body:
@@ -176,18 +176,18 @@ DEBUG: azure.core.pipeline.policies._universal:     'Content-Type': 'application
 DEBUG: azure.core.pipeline.policies._universal:     'Content-Encoding': 'gzip'
 DEBUG: azure.core.pipeline.policies._universal:     'Expires': '-1'
 DEBUG: azure.core.pipeline.policies._universal:     'Vary': 'Accept-Encoding'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-ratelimit-remaining-subscription-writes': '1199'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-ratelimit-remaining-subscription-writes': '1198'
 DEBUG: azure.core.pipeline.policies._universal:     'Request-Context': 'appId=cid-v1:2d2e8e63-272e-4b3c-8598-4ee570a0e70d'
 DEBUG: azure.core.pipeline.policies._universal:     'x-ms-response-type': 'standard'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '97e6e3e8-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': 'e74b4c52-b432-11eb-84a4-0a580af4bc60'
 DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-session-id': ''
 DEBUG: azure.core.pipeline.policies._universal:     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
 DEBUG: azure.core.pipeline.policies._universal:     'X-Content-Type-Options': 'nosniff'
-DEBUG: azure.core.pipeline.policies._universal:     'x-request-time': '0.649'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-request-id': 'fae537db-94c9-47ca-81c7-2ef45858afa1'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-correlation-request-id': 'fae537db-94c9-47ca-81c7-2ef45858afa1'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-routing-request-id': 'WESTUS:20210513T212426Z:fae537db-94c9-47ca-81c7-2ef45858afa1'
-DEBUG: azure.core.pipeline.policies._universal:     'Date': 'Thu, 13 May 2021 21:24:26 GMT'
+DEBUG: azure.core.pipeline.policies._universal:     'x-request-time': '0.438'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-request-id': '7c7d5561-554e-4def-a979-b060d9fdc699'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-correlation-request-id': '7c7d5561-554e-4def-a979-b060d9fdc699'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-routing-request-id': 'WESTUS:20210513T213349Z:7c7d5561-554e-4def-a979-b060d9fdc699'
+DEBUG: azure.core.pipeline.policies._universal:     'Date': 'Thu, 13 May 2021 21:33:49 GMT'
 DEBUG: azure.core.pipeline.policies._universal: Response content:
 DEBUG: azure.core.pipeline.policies._universal: {
   "secretsType": "AccountKey",
@@ -201,7 +201,7 @@ DEBUG: azure.core.pipeline.policies._universal: Request headers:
 DEBUG: azure.core.pipeline.policies._universal:     'Content-Type': 'application/json'
 DEBUG: azure.core.pipeline.policies._universal:     'Accept': 'application/json'
 DEBUG: azure.core.pipeline.policies._universal:     'Content-Length': '312'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '98a10cd2-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': 'e7d3b718-b432-11eb-84a4-0a580af4bc60'
 DEBUG: azure.core.pipeline.policies._universal:     'User-Agent': 'azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.6.10 (Linux-4.15.0-1113-azure-x86_64-with-debian-10.2) cloud-shell/1.0'
 DEBUG: azure.core.pipeline.policies._universal:     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL21hbmFnZW1lbnQuY29yZS53aW5kb3dzLm5ldC8iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC83MmY5ODhiZi04NmYxLTQxYWYtOTFhYi0yZDdjZDAxMWRiNDcvIiwiaWF0IjoxNjIwOTQwMTc1LCJuYmYiOjE2MjA5NDAxNzUsImV4cCI6MTYyMDk0NDA3NSwiX2NsYWltX25hbWVzIjp7Imdyb3VwcyI6InNyYzEifSwiX2NsYWltX3NvdXJjZXMiOnsic3JjMSI6eyJlbmRwb2ludCI6Imh0dHBzOi8vZ3JhcGgud2luZG93cy5uZXQvNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3L3VzZXJzLzgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYi9nZXRNZW1iZXJPYmplY3RzIn19LCJhY3IiOiIxIiwiYWlvIjoiQVZRQXEvOFRBQUFBdTJiL2lTUnh0TEgyTWJVRTlnS2RhZFdLMzBlV2x2bGlwMjlZc1JtOHFDRTd0eVVIaGdOTlZyK2JyWlpXL2Qxa21HOTVPYmE4ZEhMTTh4YjJEZ1Nld0V4U2M4b0xkSVVtSmJoQm9zWFpIOTA9IiwiYW1yIjpbIndpYSIsIm1mYSJdLCJhcHBpZCI6ImM0NGI0MDgzLTNiYjAtNDljMS1iNDdkLTk3NGU1M2NiZGYzYyIsImFwcGlkYWNyIjoiMiIsImRldmljZWlkIjoiOWVlYjhkNGUtNWQ4Yi00ZmY1LTk4NzYtNGFjNDQ3NjY5YjVlIiwiZmFtaWx5X25hbWUiOiJCYWJsZXNod2FyIiwiZ2l2ZW5fbmFtZSI6Ik1hbm9qIiwiaXBhZGRyIjoiMjA3LjExNS42Ni4yNDYiLCJuYW1lIjoiTWFub2ogQmFibGVzaHdhciIsIm9pZCI6IjgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYiIsIm9ucHJlbV9zaWQiOiJTLTEtNS0yMS0yMTQ2NzczMDg1LTkwMzM2MzI4NS03MTkzNDQ3MDctMTYxODQ0MyIsInB1aWQiOiIxMDAzMDAwMDg1RDNEMDVGIiwicmgiOiIwLkFSb0F2NGo1Y3ZHR3IwR1JxeTE4MEJIYlI0TkFTOFN3TzhGSnRIMlhUbFBMM3p3YUFKdy4iLCJzY3AiOiJ1c2VyX2ltcGVyc29uYXRpb24iLCJzdWIiOiJRZjJDbjU5ZUMtNlJyQ1pZR2t3ajYzRkZwQ3dtbWViVWQ0MEt0d01Calk4IiwidGlkIjoiNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3IiwidW5pcXVlX25hbWUiOiJtYWJhYmxlc0BtaWNyb3NvZnQuY29tIiwidXBuIjoibWFiYWJsZXNAbWljcm9zb2Z0LmNvbSIsInV0aSI6IjdBWG53Ukk1UTBlc0plRUY2VjE2QUEiLCJ2ZXIiOiIxLjAiLCJ4bXNfdGNkdCI6MTI4OTI0MTU0N30.Ih8iTv1gCDkq1UfxdhRStUxFx9VBOPfW0wRzW5r_aPut3tGt6XfBaGTtjclBGfeyksvIBLyczW-BOL2dKQsXrB5dWC01WHovu18CU-j3nU4zKkkbpOuFTzPuZ1NPCEpBJDljy1COck4dcXaGR-Pp6uR9xOa4DkvfjDlwcDWWC0obEjAs0eYx4bJNv8TI5L6fp5j2RK0f4lTAtsPZSgWqk9NcF4KhSrDzSM9_f3AOexL6WQBtM_J9TKM6GkhJewjvUvE_mpe7aDkrrKQcsThmqrT0aOTSJr281kvz17R8IcAT1Or2-7L5n8mYZ4YQ2W0oM3iqeMieUJyD9o5ux0J0MA'
 DEBUG: azure.core.pipeline.policies._universal: Request body:
@@ -216,18 +216,18 @@ DEBUG: azure.core.pipeline.policies._universal:     'Content-Type': 'application
 DEBUG: azure.core.pipeline.policies._universal:     'Content-Encoding': 'gzip'
 DEBUG: azure.core.pipeline.policies._universal:     'Expires': '-1'
 DEBUG: azure.core.pipeline.policies._universal:     'Vary': 'Accept-Encoding,Accept-Encoding'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-request-id': '396a411d-3240-4b8c-937b-79f740247937'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-ratelimit-remaining-subscription-writes': '1199'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-request-id': '932c4933-d8d5-41e3-8ef7-ef069637e85e'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-ratelimit-remaining-subscription-writes': '1197'
 DEBUG: azure.core.pipeline.policies._universal:     'Request-Context': 'appId=cid-v1:2d2e8e63-272e-4b3c-8598-4ee570a0e70d'
 DEBUG: azure.core.pipeline.policies._universal:     'x-ms-response-type': 'standard'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '98a10cd2-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': 'e7d3b718-b432-11eb-84a4-0a580af4bc60'
 DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-session-id': ''
 DEBUG: azure.core.pipeline.policies._universal:     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
 DEBUG: azure.core.pipeline.policies._universal:     'X-Content-Type-Options': 'nosniff'
-DEBUG: azure.core.pipeline.policies._universal:     'x-request-time': '1.036'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-correlation-request-id': '396a411d-3240-4b8c-937b-79f740247937'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-routing-request-id': 'WESTUS:20210513T212428Z:396a411d-3240-4b8c-937b-79f740247937'
-DEBUG: azure.core.pipeline.policies._universal:     'Date': 'Thu, 13 May 2021 21:24:28 GMT'
+DEBUG: azure.core.pipeline.policies._universal:     'x-request-time': '0.776'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-correlation-request-id': '932c4933-d8d5-41e3-8ef7-ef069637e85e'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-routing-request-id': 'WESTUS:20210513T213350Z:932c4933-d8d5-41e3-8ef7-ef069637e85e'
+DEBUG: azure.core.pipeline.policies._universal:     'Date': 'Thu, 13 May 2021 21:33:50 GMT'
 DEBUG: azure.core.pipeline.policies._universal: Response content:
 DEBUG: azure.core.pipeline.policies._universal: {
   "id": "/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/codes/7b444ef5-fa33-4798-a9be-6b3857103004/versions/1",
@@ -245,23 +245,23 @@ DEBUG: azure.core.pipeline.policies._universal: {
     "createdAt": "2021-05-13T00:36:48.0914982Z",
     "createdBy": "Manoj Bableshwar",
     "createdByType": "User",
-    "lastModifiedAt": "2021-05-13T21:24:28.0227612Z",
+    "lastModifiedAt": "2021-05-13T21:33:50.3612078Z",
     "lastModifiedBy": "Manoj Bableshwar",
     "lastModifiedByType": "User"
   }
 }
-DEBUG: azure.core.pipeline.policies._universal: Request URL: 'https://management.azure.com/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/environments/9d4b6fe0-c1a2-49bb-97c7-e95f6aafd47d/versions/1?api-version=2021-03-01-preview'
+DEBUG: azure.core.pipeline.policies._universal: Request URL: 'https://management.azure.com/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/environments/2739de26-ca3a-4d44-a2ad-30a6b3b289cf/versions/1?api-version=2021-03-01-preview'
 DEBUG: azure.core.pipeline.policies._universal: Request method: 'PUT'
 DEBUG: azure.core.pipeline.policies._universal: Request headers:
 DEBUG: azure.core.pipeline.policies._universal:     'Content-Type': 'application/json'
 DEBUG: azure.core.pipeline.policies._universal:     'Accept': 'application/json'
 DEBUG: azure.core.pipeline.policies._universal:     'Content-Length': '167'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '99712638-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': 'e87cc254-b432-11eb-84a4-0a580af4bc60'
 DEBUG: azure.core.pipeline.policies._universal:     'User-Agent': 'azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.6.10 (Linux-4.15.0-1113-azure-x86_64-with-debian-10.2) cloud-shell/1.0'
 DEBUG: azure.core.pipeline.policies._universal:     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL21hbmFnZW1lbnQuY29yZS53aW5kb3dzLm5ldC8iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC83MmY5ODhiZi04NmYxLTQxYWYtOTFhYi0yZDdjZDAxMWRiNDcvIiwiaWF0IjoxNjIwOTQwMTc1LCJuYmYiOjE2MjA5NDAxNzUsImV4cCI6MTYyMDk0NDA3NSwiX2NsYWltX25hbWVzIjp7Imdyb3VwcyI6InNyYzEifSwiX2NsYWltX3NvdXJjZXMiOnsic3JjMSI6eyJlbmRwb2ludCI6Imh0dHBzOi8vZ3JhcGgud2luZG93cy5uZXQvNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3L3VzZXJzLzgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYi9nZXRNZW1iZXJPYmplY3RzIn19LCJhY3IiOiIxIiwiYWlvIjoiQVZRQXEvOFRBQUFBdTJiL2lTUnh0TEgyTWJVRTlnS2RhZFdLMzBlV2x2bGlwMjlZc1JtOHFDRTd0eVVIaGdOTlZyK2JyWlpXL2Qxa21HOTVPYmE4ZEhMTTh4YjJEZ1Nld0V4U2M4b0xkSVVtSmJoQm9zWFpIOTA9IiwiYW1yIjpbIndpYSIsIm1mYSJdLCJhcHBpZCI6ImM0NGI0MDgzLTNiYjAtNDljMS1iNDdkLTk3NGU1M2NiZGYzYyIsImFwcGlkYWNyIjoiMiIsImRldmljZWlkIjoiOWVlYjhkNGUtNWQ4Yi00ZmY1LTk4NzYtNGFjNDQ3NjY5YjVlIiwiZmFtaWx5X25hbWUiOiJCYWJsZXNod2FyIiwiZ2l2ZW5fbmFtZSI6Ik1hbm9qIiwiaXBhZGRyIjoiMjA3LjExNS42Ni4yNDYiLCJuYW1lIjoiTWFub2ogQmFibGVzaHdhciIsIm9pZCI6IjgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYiIsIm9ucHJlbV9zaWQiOiJTLTEtNS0yMS0yMTQ2NzczMDg1LTkwMzM2MzI4NS03MTkzNDQ3MDctMTYxODQ0MyIsInB1aWQiOiIxMDAzMDAwMDg1RDNEMDVGIiwicmgiOiIwLkFSb0F2NGo1Y3ZHR3IwR1JxeTE4MEJIYlI0TkFTOFN3TzhGSnRIMlhUbFBMM3p3YUFKdy4iLCJzY3AiOiJ1c2VyX2ltcGVyc29uYXRpb24iLCJzdWIiOiJRZjJDbjU5ZUMtNlJyQ1pZR2t3ajYzRkZwQ3dtbWViVWQ0MEt0d01Calk4IiwidGlkIjoiNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3IiwidW5pcXVlX25hbWUiOiJtYWJhYmxlc0BtaWNyb3NvZnQuY29tIiwidXBuIjoibWFiYWJsZXNAbWljcm9zb2Z0LmNvbSIsInV0aSI6IjdBWG53Ukk1UTBlc0plRUY2VjE2QUEiLCJ2ZXIiOiIxLjAiLCJ4bXNfdGNkdCI6MTI4OTI0MTU0N30.Ih8iTv1gCDkq1UfxdhRStUxFx9VBOPfW0wRzW5r_aPut3tGt6XfBaGTtjclBGfeyksvIBLyczW-BOL2dKQsXrB5dWC01WHovu18CU-j3nU4zKkkbpOuFTzPuZ1NPCEpBJDljy1COck4dcXaGR-Pp6uR9xOa4DkvfjDlwcDWWC0obEjAs0eYx4bJNv8TI5L6fp5j2RK0f4lTAtsPZSgWqk9NcF4KhSrDzSM9_f3AOexL6WQBtM_J9TKM6GkhJewjvUvE_mpe7aDkrrKQcsThmqrT0aOTSJr281kvz17R8IcAT1Or2-7L5n8mYZ4YQ2W0oM3iqeMieUJyD9o5ux0J0MA'
 DEBUG: azure.core.pipeline.policies._universal: Request body:
 DEBUG: azure.core.pipeline.policies._universal: {"properties": {"docker": {"dockerSpecificationType": "Image", "platform": {}, "dockerImageUri": "docker.io/python"}, "condaFile": "./conda.yml", "isAnonymous": true}}
-DEBUG: urllib3.connectionpool: https://management.azure.com:443 "PUT /subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/environments/9d4b6fe0-c1a2-49bb-97c7-e95f6aafd47d/versions/1?api-version=2021-03-01-preview HTTP/1.1" 400 960
+DEBUG: urllib3.connectionpool: https://management.azure.com:443 "PUT /subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/environments/2739de26-ca3a-4d44-a2ad-30a6b3b289cf/versions/1?api-version=2021-03-01-preview HTTP/1.1" 400 960
 DEBUG: azure.core.pipeline.policies._universal: Response status: 400
 DEBUG: azure.core.pipeline.policies._universal: Response headers:
 DEBUG: azure.core.pipeline.policies._universal:     'Cache-Control': 'no-cache'
@@ -269,18 +269,18 @@ DEBUG: azure.core.pipeline.policies._universal:     'Pragma': 'no-cache'
 DEBUG: azure.core.pipeline.policies._universal:     'Content-Length': '960'
 DEBUG: azure.core.pipeline.policies._universal:     'Content-Type': 'application/json; charset=utf-8'
 DEBUG: azure.core.pipeline.policies._universal:     'Expires': '-1'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-ratelimit-remaining-subscription-writes': '1198'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-ratelimit-remaining-subscription-writes': '1196'
 DEBUG: azure.core.pipeline.policies._universal:     'Request-Context': 'appId=cid-v1:2d2e8e63-272e-4b3c-8598-4ee570a0e70d'
 DEBUG: azure.core.pipeline.policies._universal:     'x-ms-response-type': 'error'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '99712638-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': 'e87cc254-b432-11eb-84a4-0a580af4bc60'
 DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-session-id': ''
 DEBUG: azure.core.pipeline.policies._universal:     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
 DEBUG: azure.core.pipeline.policies._universal:     'X-Content-Type-Options': 'nosniff'
-DEBUG: azure.core.pipeline.policies._universal:     'x-request-time': '0.018'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-request-id': '62dbdf54-5519-4c63-b1b8-c162b54c39f6'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-correlation-request-id': '62dbdf54-5519-4c63-b1b8-c162b54c39f6'
-DEBUG: azure.core.pipeline.policies._universal:     'x-ms-routing-request-id': 'WESTUS:20210513T212428Z:62dbdf54-5519-4c63-b1b8-c162b54c39f6'
-DEBUG: azure.core.pipeline.policies._universal:     'Date': 'Thu, 13 May 2021 21:24:28 GMT'
+DEBUG: azure.core.pipeline.policies._universal:     'x-request-time': '0.021'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-request-id': '6df7a4eb-e684-4152-888f-e558f9639daa'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-correlation-request-id': '6df7a4eb-e684-4152-888f-e558f9639daa'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-routing-request-id': 'WESTUS:20210513T213350Z:6df7a4eb-e684-4152-888f-e558f9639daa'
+DEBUG: azure.core.pipeline.policies._universal:     'Date': 'Thu, 13 May 2021 21:33:50 GMT'
 DEBUG: azure.core.pipeline.policies._universal: Response content:
 DEBUG: azure.core.pipeline.policies._universal: {
   "error": {
@@ -309,12 +309,12 @@ DEBUG: azure.core.pipeline.policies._universal: {
     "debugInfo": null
   },
   "correlation": {
-    "operation": "0f0c45f00ac31140a7d49cca86119d50",
-    "request": "399e82e92c1b4f48"
+    "operation": "c8c693bc2692334a87919ca89cd08d08",
+    "request": "5e8e4407b7cf7848"
   },
   "environment": "eastus2",
   "location": "eastus2",
-  "time": "2021-05-13T21:24:28.7752926+00:00",
+  "time": "2021-05-13T21:33:50.8721385+00:00",
   "componentName": "managementfrontend"
 }
 DEBUG: azext_mlv2.manual.custom.print_error: Received HttpResponseError: Traceback (most recent call last):
@@ -346,8 +346,8 @@ azure.core.exceptions.HttpResponseError: (UserError) Invalid CondaFile configura
 
 Code: UserError
 Message: Invalid CondaFile configuration value. Conda specification has invalid Yaml format
-DEBUG: cli.knack.cli: Event: Cli.PostExecute [<function AzCliLogging.deinit_cmd_metadata_logging at 0x7f005cdb51e0>]
+DEBUG: cli.knack.cli: Event: Cli.PostExecute [<function AzCliLogging.deinit_cmd_metadata_logging at 0x7fda4b9781e0>]
 INFO: az_command_data_logger: exit code: 1
-INFO: cli.__main__: Command ran in 7.535 seconds (init: 0.181, invoke: 7.354)
+INFO: cli.__main__: Command ran in 5.178 seconds (init: 0.183, invoke: 4.995)
 INFO: telemetry.save: Save telemetry record of length 3040 in cache
-WARNING: telemetry.check: Negative: The /home/manoj/.azure/telemetry.txt was modified at 2021-05-13 21:14:54.405654, which in less than 600.000000 s
+WARNING: telemetry.check: Negative: The /home/manoj/.azure/telemetry.txt was modified at 2021-05-13 21:30:25.509822, which in less than 600.000000 s
