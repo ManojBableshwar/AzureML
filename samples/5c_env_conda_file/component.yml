@@ -8,6 +8,7 @@ code:
   local_path: ./src
 
 environment: 
+  conda_file: ./conda.yml
   docker: 
     image: docker.io/python
 

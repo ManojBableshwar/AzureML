@@ -2,7 +2,7 @@
 
 Pre-reqs:
 1. AzureML Workspce with a compute cluster created. 
-2. If you do not have the Azure CLI installed, follow the installation instructions at https://docs.microsoft.com/cli/azure/install-azure-cli. You can use Azure Cloud Shell which has Azure CLI pre-installed: https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart
+2. If you do not have the Azure CLI installed, follow the installation instructions at https://docs.microsoft.com/cli/azure/install-azure-cli. 2.15 is the minimum version your need. Check the version with `az version`. You can use Azure Cloud Shell which has Azure CLI pre-installed: https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart
 
 Steps:
 
@@ -25,6 +25,8 @@ Check if the installation was successful with `az version`
 4. Set your workspace defaults
 
 ```
+az account set -s "<your_subscription_name_or_id>"
+
 az config set defaults.workspace="<your_workspace>"
 az config set defaults.location="<your_region>"
 az config set defaults.group="<your_workspace_resource_group>"
@@ -43,4 +45,9 @@ cd repos
 git clone https://github.com/ManojBableshwar/AzureML.git
 ```
 
+### Known issues
+
+1. New environments and datasets are created each time job is submitted even when a registered environment or dataset are specified. 
+2. Cannot hard-code data or values in `component_job` in a `pipeline_job`. Need to map everything to `inputs` or `outputs` at the `pipeline_job` level.
+3. 
 
