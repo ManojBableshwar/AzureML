@@ -1,7 +1,7 @@
 ### Setup instructions for Pipeline Job with Command Components preview
 
 Pre-reqs:
-1. AzureML Workspce with a compute cluster created. 
+1. AzureML Workspce with a compute cluster created. We strongly recommend using an existing test or sandbox Workspace or creating a new Workspace becuase the private preview bits can have bugs. DO NOT TRY THE PREVIEW ON A WORKSPACE WITH PRODUCTION ASSETS.
 2. If you do not have the Azure CLI installed, follow the installation instructions at https://docs.microsoft.com/cli/azure/install-azure-cli. 2.15 is the minimum version your need. Check the version with `az version`. You can use Azure Cloud Shell which has Azure CLI pre-installed: https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart
 
 Steps:
@@ -34,7 +34,7 @@ az config set defaults.group="<your_workspace_resource_group>"
 
 5. Make sure your setup is working with either of the list commands: `az ml compute list`, `az ml jobs list`, or `az ml data list`
 
-6. Enable private preview features: `export AZURE_ML_CLI_PRIVATE_FEATURES_ENABLED="true"`
+6. Enable private preview features. Linux/Bash: `export AZURE_ML_CLI_PRIVATE_FEATURES_ENABLED="true"`. Windows: `set AZURE_ML_CLI_PRIVATE_FEATURES_ENABLED=true`
 
 7. Clone this samples repo: 
 
@@ -45,9 +45,11 @@ cd repos
 git clone https://github.com/ManojBableshwar/AzureML.git
 ```
 
-### Known issues
+### Known issues (to be fixed soon...)
 
 1. New environments and datasets are created each time job is submitted even when a registered environment or dataset are specified. 
 2. Cannot hard-code data or values in `component_job` in a `pipeline_job`. Need to map everything to `inputs` or `outputs` at the `pipeline_job` level.
-3. 
+3. Cannot skip mapping component input values that have defaults specified in the component definition.
+4. Cannot use Designer UI to drag-n-drop Components and create Pipelines.
+5. Input strings with spaces must use eacaped quotes. E.g. "\"hello python world\""
 
