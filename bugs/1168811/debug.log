@@ -1,0 +1,57 @@
+DEBUG: cli.knack.cli: Command arguments: ['ml', 'job', 'create', '--file', 'pipeline.yml', '--debug']
+DEBUG: cli.knack.cli: __init__ debug log:
+Cannot enable color.
+DEBUG: cli.knack.cli: Event: Cli.PreExecute []
+DEBUG: cli.knack.cli: Event: CommandParser.OnGlobalArgumentsCreate [<function CLILogging.on_global_arguments at 0x7f5ba1ab9c80>, <function OutputProducer.on_global_arguments at 0x7f5ba19ef730>, <function CLIQuery.on_global_arguments at 0x7f5ba1a07840>]
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreCommandTableCreate []
+DEBUG: cli.azure.cli.core: Modules found from index for 'ml': ['azext_mlv2']
+DEBUG: cli.azure.cli.core: Loading command modules:
+DEBUG: cli.azure.cli.core: Name                  Load Time    Groups  Commands
+DEBUG: cli.azure.cli.core: Total (0)                 0.000         0         0
+DEBUG: cli.azure.cli.core: These extensions are not installed and will be skipped: ['azext_next']
+DEBUG: cli.azure.cli.core: Loading extensions:
+DEBUG: cli.azure.cli.core: Name                  Load Time    Groups  Commands  Directory
+DEBUG: cli.azure.cli.core: ml                        0.739        11        62  /home/manoj/.azure/cliextensions/ml
+DEBUG: cli.azure.cli.core: ai-examples               0.164         1         1  /opt/az/lib/python3.6/site-packages/azure-cli-extensions/ai-examples
+DEBUG: cli.azure.cli.core: Total (2)                 0.903        12        63  
+DEBUG: cli.azure.cli.core: Loaded 12 groups, 63 commands.
+DEBUG: cli.azure.cli.core: Found a match in the command table.
+DEBUG: cli.azure.cli.core: Raw command  : ml job create
+DEBUG: cli.azure.cli.core: Command table: ml job create
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreCommandTableTruncate [<function AzCliLogging.init_command_file_logging at 0x7f5ba1530f28>]
+DEBUG: cli.azure.cli.core.azlogging: metadata file logging enabled - writing logs to '/home/manoj/.azure/commands/2021-05-13.21-24-03.ml_job_create.201.log'.
+INFO: az_command_data_logger: command args: ml job create --file {} --debug
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreArgumentLoad [<function register_global_subscription_argument.<locals>.add_subscription_parameter at 0x7f5ba1556f28>, <function register_global_query_examples_argument.<locals>.register_query_examples at 0x7f5ba1474048>]
+INFO: cli.knack.commands: Configured default 'OpenDatasetsPMRG' for arg resource_group_name
+INFO: cli.knack.commands: Configured default 'OpenDatasetsPMWorkspace' for arg workspace_name
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostArgumentLoad []
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostCommandTableCreate [<function register_ids_argument.<locals>.add_ids_arguments at 0x7f5ba14740d0>, <function register_cache_arguments.<locals>.add_cache_arguments at 0x7f5ba14741e0>]
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnCommandTableLoaded []
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreParseArgs []
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostParseArgs [<function OutputProducer.handle_output_argument at 0x7f5ba19ef7b8>, <function CLIQuery.handle_query_parameter at 0x7f5ba1a078c8>, <function register_global_query_examples_argument.<locals>.handle_example_parameter at 0x7f5ba1467f28>, <function register_ids_argument.<locals>.parse_ids_arguments at 0x7f5ba1474158>]
+INFO: az_command_data_logger: extension name: ml
+INFO: az_command_data_logger: extension version: 0.0.79
+WARNING: Command group 'ml job' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus
+DEBUG: cli.azure.cli.core.commands.client_factory: Getting management service client client_type=AzureMachineLearningWorkspaces
+DEBUG: azext_mlv2.manual.custom.print_error: Traceback (most recent call last):
+  File "/home/manoj/.azure/cliextensions/ml/azext_mlv2/manual/vendored_curated_sdk/azure/ml/_utils/utils.py", line 150, in load_yaml
+    with open(file_path, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'pipeline.yml'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/manoj/.azure/cliextensions/ml/azext_mlv2/manual/custom/job.py", line 68, in ml_job_create
+    job = Job.load(path=file, params_override=params_override)
+  File "/home/manoj/.azure/cliextensions/ml/azext_mlv2/manual/vendored_curated_sdk/azure/ml/entities/job/job.py", line 205, in load
+    yaml_dict = load_yaml(path)
+  File "/home/manoj/.azure/cliextensions/ml/azext_mlv2/manual/vendored_curated_sdk/azure/ml/_utils/utils.py", line 154, in load_yaml
+    raise Exception(f"No such file or directory: {file_path}")
+Exception: No such file or directory: pipeline.yml
+
+No such file or directory: pipeline.yml
+DEBUG: cli.knack.cli: Event: Cli.PostExecute [<function AzCliLogging.deinit_cmd_metadata_logging at 0x7f5ba15311e0>]
+INFO: az_command_data_logger: exit code: 1
+INFO: cli.__main__: Command ran in 1.231 seconds (init: 0.181, invoke: 1.050)
+INFO: telemetry.save: Save telemetry record of length 3040 in cache
+WARNING: telemetry.check: Negative: The /home/manoj/.azure/telemetry.txt was modified at 2021-05-13 21:14:54.405654, which in less than 600.000000 s

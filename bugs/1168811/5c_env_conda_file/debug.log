@@ -1,0 +1,353 @@
+DEBUG: cli.knack.cli: Command arguments: ['ml', 'job', 'create', '--file', 'pipeline.yml', '--debug']
+DEBUG: cli.knack.cli: __init__ debug log:
+Cannot enable color.
+DEBUG: cli.knack.cli: Event: Cli.PreExecute []
+DEBUG: cli.knack.cli: Event: CommandParser.OnGlobalArgumentsCreate [<function CLILogging.on_global_arguments at 0x7f005d33dc80>, <function OutputProducer.on_global_arguments at 0x7f005d273730>, <function CLIQuery.on_global_arguments at 0x7f005d28b840>]
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreCommandTableCreate []
+DEBUG: cli.azure.cli.core: Modules found from index for 'ml': ['azext_mlv2']
+DEBUG: cli.azure.cli.core: Loading command modules:
+DEBUG: cli.azure.cli.core: Name                  Load Time    Groups  Commands
+DEBUG: cli.azure.cli.core: Total (0)                 0.000         0         0
+DEBUG: cli.azure.cli.core: These extensions are not installed and will be skipped: ['azext_next']
+DEBUG: cli.azure.cli.core: Loading extensions:
+DEBUG: cli.azure.cli.core: Name                  Load Time    Groups  Commands  Directory
+DEBUG: cli.azure.cli.core: ml                        0.700        11        62  /home/manoj/.azure/cliextensions/ml
+DEBUG: cli.azure.cli.core: ai-examples               0.164         1         1  /opt/az/lib/python3.6/site-packages/azure-cli-extensions/ai-examples
+DEBUG: cli.azure.cli.core: Total (2)                 0.864        12        63  
+DEBUG: cli.azure.cli.core: Loaded 12 groups, 63 commands.
+DEBUG: cli.azure.cli.core: Found a match in the command table.
+DEBUG: cli.azure.cli.core: Raw command  : ml job create
+DEBUG: cli.azure.cli.core: Command table: ml job create
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreCommandTableTruncate [<function AzCliLogging.init_command_file_logging at 0x7f005cdb4f28>]
+DEBUG: cli.azure.cli.core.azlogging: metadata file logging enabled - writing logs to '/home/manoj/.azure/commands/2021-05-13.21-24-22.ml_job_create.211.log'.
+INFO: az_command_data_logger: command args: ml job create --file {} --debug
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreArgumentLoad [<function register_global_subscription_argument.<locals>.add_subscription_parameter at 0x7f005cddaf28>, <function register_global_query_examples_argument.<locals>.register_query_examples at 0x7f005ccf8048>]
+INFO: cli.knack.commands: Configured default 'OpenDatasetsPMRG' for arg resource_group_name
+INFO: cli.knack.commands: Configured default 'OpenDatasetsPMWorkspace' for arg workspace_name
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostArgumentLoad []
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostCommandTableCreate [<function register_ids_argument.<locals>.add_ids_arguments at 0x7f005ccf80d0>, <function register_cache_arguments.<locals>.add_cache_arguments at 0x7f005ccf81e0>]
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnCommandTableLoaded []
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreParseArgs []
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostParseArgs [<function OutputProducer.handle_output_argument at 0x7f005d2737b8>, <function CLIQuery.handle_query_parameter at 0x7f005d28b8c8>, <function register_global_query_examples_argument.<locals>.handle_example_parameter at 0x7f005ccebf28>, <function register_ids_argument.<locals>.parse_ids_arguments at 0x7f005ccf8158>]
+INFO: az_command_data_logger: extension name: ml
+INFO: az_command_data_logger: extension version: 0.0.79
+WARNING: Command group 'ml job' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus
+DEBUG: cli.azure.cli.core.commands.client_factory: Getting management service client client_type=AzureMachineLearningWorkspaces
+INFO: azure.identity._internal.decorators: AzureCliCredential.get_token succeeded
+DEBUG: azure.core.pipeline.policies._universal: Request URL: 'https://management.azure.com/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/datastores?api-version=2021-03-01-preview&count=30&isDefault=true&orderByAsc=false'
+DEBUG: azure.core.pipeline.policies._universal: Request method: 'GET'
+DEBUG: azure.core.pipeline.policies._universal: Request headers:
+DEBUG: azure.core.pipeline.policies._universal:     'Accept': 'application/json'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '95e80450-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'User-Agent': 'azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.6.10 (Linux-4.15.0-1113-azure-x86_64-with-debian-10.2) cloud-shell/1.0'
+DEBUG: azure.core.pipeline.policies._universal:     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL21hbmFnZW1lbnQuY29yZS53aW5kb3dzLm5ldC8iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC83MmY5ODhiZi04NmYxLTQxYWYtOTFhYi0yZDdjZDAxMWRiNDcvIiwiaWF0IjoxNjIwOTQwMTc1LCJuYmYiOjE2MjA5NDAxNzUsImV4cCI6MTYyMDk0NDA3NSwiX2NsYWltX25hbWVzIjp7Imdyb3VwcyI6InNyYzEifSwiX2NsYWltX3NvdXJjZXMiOnsic3JjMSI6eyJlbmRwb2ludCI6Imh0dHBzOi8vZ3JhcGgud2luZG93cy5uZXQvNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3L3VzZXJzLzgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYi9nZXRNZW1iZXJPYmplY3RzIn19LCJhY3IiOiIxIiwiYWlvIjoiQVZRQXEvOFRBQUFBdTJiL2lTUnh0TEgyTWJVRTlnS2RhZFdLMzBlV2x2bGlwMjlZc1JtOHFDRTd0eVVIaGdOTlZyK2JyWlpXL2Qxa21HOTVPYmE4ZEhMTTh4YjJEZ1Nld0V4U2M4b0xkSVVtSmJoQm9zWFpIOTA9IiwiYW1yIjpbIndpYSIsIm1mYSJdLCJhcHBpZCI6ImM0NGI0MDgzLTNiYjAtNDljMS1iNDdkLTk3NGU1M2NiZGYzYyIsImFwcGlkYWNyIjoiMiIsImRldmljZWlkIjoiOWVlYjhkNGUtNWQ4Yi00ZmY1LTk4NzYtNGFjNDQ3NjY5YjVlIiwiZmFtaWx5X25hbWUiOiJCYWJsZXNod2FyIiwiZ2l2ZW5fbmFtZSI6Ik1hbm9qIiwiaXBhZGRyIjoiMjA3LjExNS42Ni4yNDYiLCJuYW1lIjoiTWFub2ogQmFibGVzaHdhciIsIm9pZCI6IjgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYiIsIm9ucHJlbV9zaWQiOiJTLTEtNS0yMS0yMTQ2NzczMDg1LTkwMzM2MzI4NS03MTkzNDQ3MDctMTYxODQ0MyIsInB1aWQiOiIxMDAzMDAwMDg1RDNEMDVGIiwicmgiOiIwLkFSb0F2NGo1Y3ZHR3IwR1JxeTE4MEJIYlI0TkFTOFN3TzhGSnRIMlhUbFBMM3p3YUFKdy4iLCJzY3AiOiJ1c2VyX2ltcGVyc29uYXRpb24iLCJzdWIiOiJRZjJDbjU5ZUMtNlJyQ1pZR2t3ajYzRkZwQ3dtbWViVWQ0MEt0d01Calk4IiwidGlkIjoiNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3IiwidW5pcXVlX25hbWUiOiJtYWJhYmxlc0BtaWNyb3NvZnQuY29tIiwidXBuIjoibWFiYWJsZXNAbWljcm9zb2Z0LmNvbSIsInV0aSI6IjdBWG53Ukk1UTBlc0plRUY2VjE2QUEiLCJ2ZXIiOiIxLjAiLCJ4bXNfdGNkdCI6MTI4OTI0MTU0N30.Ih8iTv1gCDkq1UfxdhRStUxFx9VBOPfW0wRzW5r_aPut3tGt6XfBaGTtjclBGfeyksvIBLyczW-BOL2dKQsXrB5dWC01WHovu18CU-j3nU4zKkkbpOuFTzPuZ1NPCEpBJDljy1COck4dcXaGR-Pp6uR9xOa4DkvfjDlwcDWWC0obEjAs0eYx4bJNv8TI5L6fp5j2RK0f4lTAtsPZSgWqk9NcF4KhSrDzSM9_f3AOexL6WQBtM_J9TKM6GkhJewjvUvE_mpe7aDkrrKQcsThmqrT0aOTSJr281kvz17R8IcAT1Or2-7L5n8mYZ4YQ2W0oM3iqeMieUJyD9o5ux0J0MA'
+DEBUG: azure.core.pipeline.policies._universal: Request body:
+DEBUG: azure.core.pipeline.policies._universal: This request has no body
+DEBUG: urllib3.connectionpool: Starting new HTTPS connection (1): management.azure.com:443
+DEBUG: urllib3.connectionpool: https://management.azure.com:443 "GET /subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/datastores?api-version=2021-03-01-preview&count=30&isDefault=true&orderByAsc=false HTTP/1.1" 200 None
+DEBUG: azure.core.pipeline.policies._universal: Response status: 200
+DEBUG: azure.core.pipeline.policies._universal: Response headers:
+DEBUG: azure.core.pipeline.policies._universal:     'Cache-Control': 'no-cache'
+DEBUG: azure.core.pipeline.policies._universal:     'Pragma': 'no-cache'
+DEBUG: azure.core.pipeline.policies._universal:     'Transfer-Encoding': 'chunked'
+DEBUG: azure.core.pipeline.policies._universal:     'Content-Type': 'application/json; charset=utf-8'
+DEBUG: azure.core.pipeline.policies._universal:     'Content-Encoding': 'gzip'
+DEBUG: azure.core.pipeline.policies._universal:     'Expires': '-1'
+DEBUG: azure.core.pipeline.policies._universal:     'Vary': 'Accept-Encoding,Accept-Encoding'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-request-id': '523f8b60-8be2-46bd-b5f1-526dd59a08f2'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-ratelimit-remaining-subscription-reads': '11998'
+DEBUG: azure.core.pipeline.policies._universal:     'Request-Context': 'appId=cid-v1:2d2e8e63-272e-4b3c-8598-4ee570a0e70d'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-response-type': 'standard'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '95e80450-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-session-id': ''
+DEBUG: azure.core.pipeline.policies._universal:     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
+DEBUG: azure.core.pipeline.policies._universal:     'X-Content-Type-Options': 'nosniff'
+DEBUG: azure.core.pipeline.policies._universal:     'x-request-time': '1.744'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-correlation-request-id': '523f8b60-8be2-46bd-b5f1-526dd59a08f2'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-routing-request-id': 'WESTUS:20210513T212425Z:523f8b60-8be2-46bd-b5f1-526dd59a08f2'
+DEBUG: azure.core.pipeline.policies._universal:     'Date': 'Thu, 13 May 2021 21:24:25 GMT'
+DEBUG: azure.core.pipeline.policies._universal: Response content:
+DEBUG: azure.core.pipeline.policies._universal: {
+  "value": [
+    {
+      "id": "/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/datastores/workspaceblobstore",
+      "name": "workspaceblobstore",
+      "type": "Microsoft.MachineLearningServices/workspaces/datastores",
+      "properties": {
+        "contents": {
+          "contentsType": "AzureBlob",
+          "accountName": "opendatasetspm6562936819",
+          "containerName": "azureml-blobstore-c5b64b45-4a96-4790-8be2-ff7d3d5dd36c",
+          "endpoint": "core.windows.net",
+          "protocol": "https",
+          "credentials": {
+            "credentialsType": "AccountKey"
+          }
+        },
+        "hasBeenValidated": true,
+        "isDefault": true,
+        "linkedInfo": null,
+        "properties": null,
+        "description": null,
+        "tags": null
+      },
+      "systemData": {
+        "createdAt": "2019-10-08T08:29:19.1228533Z",
+        "lastModifiedAt": "2019-10-08T08:29:19.1228533Z"
+      }
+    }
+  ]
+}
+DEBUG: azure.core.pipeline.policies._universal: Request URL: 'https://management.azure.com/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/datastores/workspaceblobstore?api-version=2021-03-01-preview'
+DEBUG: azure.core.pipeline.policies._universal: Request method: 'GET'
+DEBUG: azure.core.pipeline.policies._universal: Request headers:
+DEBUG: azure.core.pipeline.policies._universal:     'Accept': 'application/json'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '97b2a40c-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'User-Agent': 'azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.6.10 (Linux-4.15.0-1113-azure-x86_64-with-debian-10.2) cloud-shell/1.0'
+DEBUG: azure.core.pipeline.policies._universal:     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL21hbmFnZW1lbnQuY29yZS53aW5kb3dzLm5ldC8iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC83MmY5ODhiZi04NmYxLTQxYWYtOTFhYi0yZDdjZDAxMWRiNDcvIiwiaWF0IjoxNjIwOTQwMTc1LCJuYmYiOjE2MjA5NDAxNzUsImV4cCI6MTYyMDk0NDA3NSwiX2NsYWltX25hbWVzIjp7Imdyb3VwcyI6InNyYzEifSwiX2NsYWltX3NvdXJjZXMiOnsic3JjMSI6eyJlbmRwb2ludCI6Imh0dHBzOi8vZ3JhcGgud2luZG93cy5uZXQvNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3L3VzZXJzLzgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYi9nZXRNZW1iZXJPYmplY3RzIn19LCJhY3IiOiIxIiwiYWlvIjoiQVZRQXEvOFRBQUFBdTJiL2lTUnh0TEgyTWJVRTlnS2RhZFdLMzBlV2x2bGlwMjlZc1JtOHFDRTd0eVVIaGdOTlZyK2JyWlpXL2Qxa21HOTVPYmE4ZEhMTTh4YjJEZ1Nld0V4U2M4b0xkSVVtSmJoQm9zWFpIOTA9IiwiYW1yIjpbIndpYSIsIm1mYSJdLCJhcHBpZCI6ImM0NGI0MDgzLTNiYjAtNDljMS1iNDdkLTk3NGU1M2NiZGYzYyIsImFwcGlkYWNyIjoiMiIsImRldmljZWlkIjoiOWVlYjhkNGUtNWQ4Yi00ZmY1LTk4NzYtNGFjNDQ3NjY5YjVlIiwiZmFtaWx5X25hbWUiOiJCYWJsZXNod2FyIiwiZ2l2ZW5fbmFtZSI6Ik1hbm9qIiwiaXBhZGRyIjoiMjA3LjExNS42Ni4yNDYiLCJuYW1lIjoiTWFub2ogQmFibGVzaHdhciIsIm9pZCI6IjgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYiIsIm9ucHJlbV9zaWQiOiJTLTEtNS0yMS0yMTQ2NzczMDg1LTkwMzM2MzI4NS03MTkzNDQ3MDctMTYxODQ0MyIsInB1aWQiOiIxMDAzMDAwMDg1RDNEMDVGIiwicmgiOiIwLkFSb0F2NGo1Y3ZHR3IwR1JxeTE4MEJIYlI0TkFTOFN3TzhGSnRIMlhUbFBMM3p3YUFKdy4iLCJzY3AiOiJ1c2VyX2ltcGVyc29uYXRpb24iLCJzdWIiOiJRZjJDbjU5ZUMtNlJyQ1pZR2t3ajYzRkZwQ3dtbWViVWQ0MEt0d01Calk4IiwidGlkIjoiNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3IiwidW5pcXVlX25hbWUiOiJtYWJhYmxlc0BtaWNyb3NvZnQuY29tIiwidXBuIjoibWFiYWJsZXNAbWljcm9zb2Z0LmNvbSIsInV0aSI6IjdBWG53Ukk1UTBlc0plRUY2VjE2QUEiLCJ2ZXIiOiIxLjAiLCJ4bXNfdGNkdCI6MTI4OTI0MTU0N30.Ih8iTv1gCDkq1UfxdhRStUxFx9VBOPfW0wRzW5r_aPut3tGt6XfBaGTtjclBGfeyksvIBLyczW-BOL2dKQsXrB5dWC01WHovu18CU-j3nU4zKkkbpOuFTzPuZ1NPCEpBJDljy1COck4dcXaGR-Pp6uR9xOa4DkvfjDlwcDWWC0obEjAs0eYx4bJNv8TI5L6fp5j2RK0f4lTAtsPZSgWqk9NcF4KhSrDzSM9_f3AOexL6WQBtM_J9TKM6GkhJewjvUvE_mpe7aDkrrKQcsThmqrT0aOTSJr281kvz17R8IcAT1Or2-7L5n8mYZ4YQ2W0oM3iqeMieUJyD9o5ux0J0MA'
+DEBUG: azure.core.pipeline.policies._universal: Request body:
+DEBUG: azure.core.pipeline.policies._universal: This request has no body
+DEBUG: urllib3.connectionpool: https://management.azure.com:443 "GET /subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/datastores/workspaceblobstore?api-version=2021-03-01-preview HTTP/1.1" 200 None
+DEBUG: azure.core.pipeline.policies._universal: Response status: 200
+DEBUG: azure.core.pipeline.policies._universal: Response headers:
+DEBUG: azure.core.pipeline.policies._universal:     'Cache-Control': 'no-cache'
+DEBUG: azure.core.pipeline.policies._universal:     'Pragma': 'no-cache'
+DEBUG: azure.core.pipeline.policies._universal:     'Transfer-Encoding': 'chunked'
+DEBUG: azure.core.pipeline.policies._universal:     'Content-Type': 'application/json; charset=utf-8'
+DEBUG: azure.core.pipeline.policies._universal:     'Content-Encoding': 'gzip'
+DEBUG: azure.core.pipeline.policies._universal:     'Expires': '-1'
+DEBUG: azure.core.pipeline.policies._universal:     'Vary': 'Accept-Encoding,Accept-Encoding'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-request-id': 'd991bde8-7c71-4a69-8a5e-91208e5b6d07'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-ratelimit-remaining-subscription-reads': '11997'
+DEBUG: azure.core.pipeline.policies._universal:     'Request-Context': 'appId=cid-v1:2d2e8e63-272e-4b3c-8598-4ee570a0e70d'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-response-type': 'standard'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '97b2a40c-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-session-id': ''
+DEBUG: azure.core.pipeline.policies._universal:     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
+DEBUG: azure.core.pipeline.policies._universal:     'X-Content-Type-Options': 'nosniff'
+DEBUG: azure.core.pipeline.policies._universal:     'x-request-time': '0.254'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-correlation-request-id': 'd991bde8-7c71-4a69-8a5e-91208e5b6d07'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-routing-request-id': 'WESTUS:20210513T212425Z:d991bde8-7c71-4a69-8a5e-91208e5b6d07'
+DEBUG: azure.core.pipeline.policies._universal:     'Date': 'Thu, 13 May 2021 21:24:25 GMT'
+DEBUG: azure.core.pipeline.policies._universal: Response content:
+DEBUG: azure.core.pipeline.policies._universal: {
+  "id": "/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/datastores/workspaceblobstore",
+  "name": "workspaceblobstore",
+  "type": "Microsoft.MachineLearningServices/workspaces/datastores",
+  "properties": {
+    "contents": {
+      "contentsType": "AzureBlob",
+      "accountName": "opendatasetspm6562936819",
+      "containerName": "azureml-blobstore-c5b64b45-4a96-4790-8be2-ff7d3d5dd36c",
+      "endpoint": "core.windows.net",
+      "protocol": "https",
+      "credentials": {
+        "credentialsType": "AccountKey"
+      }
+    },
+    "hasBeenValidated": true,
+    "isDefault": true,
+    "linkedInfo": null,
+    "properties": null,
+    "description": null,
+    "tags": null
+  },
+  "systemData": {
+    "createdAt": "2019-10-08T08:29:19.1228533Z",
+    "lastModifiedAt": "2019-10-08T08:29:19.1228533Z"
+  }
+}
+DEBUG: azure.core.pipeline.policies._universal: Request URL: 'https://management.azure.com/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/datastores/workspaceblobstore/listSecrets?api-version=2021-03-01-preview'
+DEBUG: azure.core.pipeline.policies._universal: Request method: 'POST'
+DEBUG: azure.core.pipeline.policies._universal: Request headers:
+DEBUG: azure.core.pipeline.policies._universal:     'Accept': 'application/json'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '97e6e3e8-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'User-Agent': 'azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.6.10 (Linux-4.15.0-1113-azure-x86_64-with-debian-10.2) cloud-shell/1.0'
+DEBUG: azure.core.pipeline.policies._universal:     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL21hbmFnZW1lbnQuY29yZS53aW5kb3dzLm5ldC8iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC83MmY5ODhiZi04NmYxLTQxYWYtOTFhYi0yZDdjZDAxMWRiNDcvIiwiaWF0IjoxNjIwOTQwMTc1LCJuYmYiOjE2MjA5NDAxNzUsImV4cCI6MTYyMDk0NDA3NSwiX2NsYWltX25hbWVzIjp7Imdyb3VwcyI6InNyYzEifSwiX2NsYWltX3NvdXJjZXMiOnsic3JjMSI6eyJlbmRwb2ludCI6Imh0dHBzOi8vZ3JhcGgud2luZG93cy5uZXQvNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3L3VzZXJzLzgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYi9nZXRNZW1iZXJPYmplY3RzIn19LCJhY3IiOiIxIiwiYWlvIjoiQVZRQXEvOFRBQUFBdTJiL2lTUnh0TEgyTWJVRTlnS2RhZFdLMzBlV2x2bGlwMjlZc1JtOHFDRTd0eVVIaGdOTlZyK2JyWlpXL2Qxa21HOTVPYmE4ZEhMTTh4YjJEZ1Nld0V4U2M4b0xkSVVtSmJoQm9zWFpIOTA9IiwiYW1yIjpbIndpYSIsIm1mYSJdLCJhcHBpZCI6ImM0NGI0MDgzLTNiYjAtNDljMS1iNDdkLTk3NGU1M2NiZGYzYyIsImFwcGlkYWNyIjoiMiIsImRldmljZWlkIjoiOWVlYjhkNGUtNWQ4Yi00ZmY1LTk4NzYtNGFjNDQ3NjY5YjVlIiwiZmFtaWx5X25hbWUiOiJCYWJsZXNod2FyIiwiZ2l2ZW5fbmFtZSI6Ik1hbm9qIiwiaXBhZGRyIjoiMjA3LjExNS42Ni4yNDYiLCJuYW1lIjoiTWFub2ogQmFibGVzaHdhciIsIm9pZCI6IjgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYiIsIm9ucHJlbV9zaWQiOiJTLTEtNS0yMS0yMTQ2NzczMDg1LTkwMzM2MzI4NS03MTkzNDQ3MDctMTYxODQ0MyIsInB1aWQiOiIxMDAzMDAwMDg1RDNEMDVGIiwicmgiOiIwLkFSb0F2NGo1Y3ZHR3IwR1JxeTE4MEJIYlI0TkFTOFN3TzhGSnRIMlhUbFBMM3p3YUFKdy4iLCJzY3AiOiJ1c2VyX2ltcGVyc29uYXRpb24iLCJzdWIiOiJRZjJDbjU5ZUMtNlJyQ1pZR2t3ajYzRkZwQ3dtbWViVWQ0MEt0d01Calk4IiwidGlkIjoiNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3IiwidW5pcXVlX25hbWUiOiJtYWJhYmxlc0BtaWNyb3NvZnQuY29tIiwidXBuIjoibWFiYWJsZXNAbWljcm9zb2Z0LmNvbSIsInV0aSI6IjdBWG53Ukk1UTBlc0plRUY2VjE2QUEiLCJ2ZXIiOiIxLjAiLCJ4bXNfdGNkdCI6MTI4OTI0MTU0N30.Ih8iTv1gCDkq1UfxdhRStUxFx9VBOPfW0wRzW5r_aPut3tGt6XfBaGTtjclBGfeyksvIBLyczW-BOL2dKQsXrB5dWC01WHovu18CU-j3nU4zKkkbpOuFTzPuZ1NPCEpBJDljy1COck4dcXaGR-Pp6uR9xOa4DkvfjDlwcDWWC0obEjAs0eYx4bJNv8TI5L6fp5j2RK0f4lTAtsPZSgWqk9NcF4KhSrDzSM9_f3AOexL6WQBtM_J9TKM6GkhJewjvUvE_mpe7aDkrrKQcsThmqrT0aOTSJr281kvz17R8IcAT1Or2-7L5n8mYZ4YQ2W0oM3iqeMieUJyD9o5ux0J0MA'
+DEBUG: azure.core.pipeline.policies._universal: Request body:
+DEBUG: azure.core.pipeline.policies._universal: This request has no body
+DEBUG: urllib3.connectionpool: https://management.azure.com:443 "POST /subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/datastores/workspaceblobstore/listSecrets?api-version=2021-03-01-preview HTTP/1.1" 200 None
+DEBUG: azure.core.pipeline.policies._universal: Response status: 200
+DEBUG: azure.core.pipeline.policies._universal: Response headers:
+DEBUG: azure.core.pipeline.policies._universal:     'Cache-Control': 'no-cache'
+DEBUG: azure.core.pipeline.policies._universal:     'Pragma': 'no-cache'
+DEBUG: azure.core.pipeline.policies._universal:     'Transfer-Encoding': 'chunked'
+DEBUG: azure.core.pipeline.policies._universal:     'Content-Type': 'application/json; charset=utf-8'
+DEBUG: azure.core.pipeline.policies._universal:     'Content-Encoding': 'gzip'
+DEBUG: azure.core.pipeline.policies._universal:     'Expires': '-1'
+DEBUG: azure.core.pipeline.policies._universal:     'Vary': 'Accept-Encoding'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-ratelimit-remaining-subscription-writes': '1199'
+DEBUG: azure.core.pipeline.policies._universal:     'Request-Context': 'appId=cid-v1:2d2e8e63-272e-4b3c-8598-4ee570a0e70d'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-response-type': 'standard'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '97e6e3e8-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-session-id': ''
+DEBUG: azure.core.pipeline.policies._universal:     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
+DEBUG: azure.core.pipeline.policies._universal:     'X-Content-Type-Options': 'nosniff'
+DEBUG: azure.core.pipeline.policies._universal:     'x-request-time': '0.649'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-request-id': 'fae537db-94c9-47ca-81c7-2ef45858afa1'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-correlation-request-id': 'fae537db-94c9-47ca-81c7-2ef45858afa1'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-routing-request-id': 'WESTUS:20210513T212426Z:fae537db-94c9-47ca-81c7-2ef45858afa1'
+DEBUG: azure.core.pipeline.policies._universal:     'Date': 'Thu, 13 May 2021 21:24:26 GMT'
+DEBUG: azure.core.pipeline.policies._universal: Response content:
+DEBUG: azure.core.pipeline.policies._universal: {
+  "secretsType": "AccountKey",
+  "key": "+DCZPTyEsLQQ+Bgvr3wjwRRNO+c7wTBP+s1xoe5PCXGIim+v7Mq9etYozP4c82vrkO1rgyaLSVISI/BdtArgfA=="
+}
+DEBUG: urllib3.connectionpool: Starting new HTTPS connection (1): opendatasetspm6562936819.blob.core.windows.net:443
+DEBUG: urllib3.connectionpool: https://opendatasetspm6562936819.blob.core.windows.net:443 "HEAD /azureml-blobstore-c5b64b45-4a96-4790-8be2-ff7d3d5dd36c/az-ml-artifacts/abf5d1c340617eee61dc64c3f3dd35e8/src/hello.py HTTP/1.1" 200 0
+DEBUG: azure.core.pipeline.policies._universal: Request URL: 'https://management.azure.com/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/codes/7b444ef5-fa33-4798-a9be-6b3857103004/versions/1?api-version=2021-03-01-preview'
+DEBUG: azure.core.pipeline.policies._universal: Request method: 'PUT'
+DEBUG: azure.core.pipeline.policies._universal: Request headers:
+DEBUG: azure.core.pipeline.policies._universal:     'Content-Type': 'application/json'
+DEBUG: azure.core.pipeline.policies._universal:     'Accept': 'application/json'
+DEBUG: azure.core.pipeline.policies._universal:     'Content-Length': '312'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '98a10cd2-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'User-Agent': 'azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.6.10 (Linux-4.15.0-1113-azure-x86_64-with-debian-10.2) cloud-shell/1.0'
+DEBUG: azure.core.pipeline.policies._universal:     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL21hbmFnZW1lbnQuY29yZS53aW5kb3dzLm5ldC8iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC83MmY5ODhiZi04NmYxLTQxYWYtOTFhYi0yZDdjZDAxMWRiNDcvIiwiaWF0IjoxNjIwOTQwMTc1LCJuYmYiOjE2MjA5NDAxNzUsImV4cCI6MTYyMDk0NDA3NSwiX2NsYWltX25hbWVzIjp7Imdyb3VwcyI6InNyYzEifSwiX2NsYWltX3NvdXJjZXMiOnsic3JjMSI6eyJlbmRwb2ludCI6Imh0dHBzOi8vZ3JhcGgud2luZG93cy5uZXQvNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3L3VzZXJzLzgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYi9nZXRNZW1iZXJPYmplY3RzIn19LCJhY3IiOiIxIiwiYWlvIjoiQVZRQXEvOFRBQUFBdTJiL2lTUnh0TEgyTWJVRTlnS2RhZFdLMzBlV2x2bGlwMjlZc1JtOHFDRTd0eVVIaGdOTlZyK2JyWlpXL2Qxa21HOTVPYmE4ZEhMTTh4YjJEZ1Nld0V4U2M4b0xkSVVtSmJoQm9zWFpIOTA9IiwiYW1yIjpbIndpYSIsIm1mYSJdLCJhcHBpZCI6ImM0NGI0MDgzLTNiYjAtNDljMS1iNDdkLTk3NGU1M2NiZGYzYyIsImFwcGlkYWNyIjoiMiIsImRldmljZWlkIjoiOWVlYjhkNGUtNWQ4Yi00ZmY1LTk4NzYtNGFjNDQ3NjY5YjVlIiwiZmFtaWx5X25hbWUiOiJCYWJsZXNod2FyIiwiZ2l2ZW5fbmFtZSI6Ik1hbm9qIiwiaXBhZGRyIjoiMjA3LjExNS42Ni4yNDYiLCJuYW1lIjoiTWFub2ogQmFibGVzaHdhciIsIm9pZCI6IjgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYiIsIm9ucHJlbV9zaWQiOiJTLTEtNS0yMS0yMTQ2NzczMDg1LTkwMzM2MzI4NS03MTkzNDQ3MDctMTYxODQ0MyIsInB1aWQiOiIxMDAzMDAwMDg1RDNEMDVGIiwicmgiOiIwLkFSb0F2NGo1Y3ZHR3IwR1JxeTE4MEJIYlI0TkFTOFN3TzhGSnRIMlhUbFBMM3p3YUFKdy4iLCJzY3AiOiJ1c2VyX2ltcGVyc29uYXRpb24iLCJzdWIiOiJRZjJDbjU5ZUMtNlJyQ1pZR2t3ajYzRkZwQ3dtbWViVWQ0MEt0d01Calk4IiwidGlkIjoiNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3IiwidW5pcXVlX25hbWUiOiJtYWJhYmxlc0BtaWNyb3NvZnQuY29tIiwidXBuIjoibWFiYWJsZXNAbWljcm9zb2Z0LmNvbSIsInV0aSI6IjdBWG53Ukk1UTBlc0plRUY2VjE2QUEiLCJ2ZXIiOiIxLjAiLCJ4bXNfdGNkdCI6MTI4OTI0MTU0N30.Ih8iTv1gCDkq1UfxdhRStUxFx9VBOPfW0wRzW5r_aPut3tGt6XfBaGTtjclBGfeyksvIBLyczW-BOL2dKQsXrB5dWC01WHovu18CU-j3nU4zKkkbpOuFTzPuZ1NPCEpBJDljy1COck4dcXaGR-Pp6uR9xOa4DkvfjDlwcDWWC0obEjAs0eYx4bJNv8TI5L6fp5j2RK0f4lTAtsPZSgWqk9NcF4KhSrDzSM9_f3AOexL6WQBtM_J9TKM6GkhJewjvUvE_mpe7aDkrrKQcsThmqrT0aOTSJr281kvz17R8IcAT1Or2-7L5n8mYZ4YQ2W0oM3iqeMieUJyD9o5ux0J0MA'
+DEBUG: azure.core.pipeline.policies._universal: Request body:
+DEBUG: azure.core.pipeline.policies._universal: {"properties": {"datastoreId": "/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/datastores/workspaceblobstore", "path": "az-ml-artifacts/abf5d1c340617eee61dc64c3f3dd35e8/src", "isAnonymous": true}}
+DEBUG: urllib3.connectionpool: https://management.azure.com:443 "PUT /subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/codes/7b444ef5-fa33-4798-a9be-6b3857103004/versions/1?api-version=2021-03-01-preview HTTP/1.1" 200 None
+DEBUG: azure.core.pipeline.policies._universal: Response status: 200
+DEBUG: azure.core.pipeline.policies._universal: Response headers:
+DEBUG: azure.core.pipeline.policies._universal:     'Cache-Control': 'no-cache'
+DEBUG: azure.core.pipeline.policies._universal:     'Pragma': 'no-cache'
+DEBUG: azure.core.pipeline.policies._universal:     'Transfer-Encoding': 'chunked'
+DEBUG: azure.core.pipeline.policies._universal:     'Content-Type': 'application/json; charset=utf-8'
+DEBUG: azure.core.pipeline.policies._universal:     'Content-Encoding': 'gzip'
+DEBUG: azure.core.pipeline.policies._universal:     'Expires': '-1'
+DEBUG: azure.core.pipeline.policies._universal:     'Vary': 'Accept-Encoding,Accept-Encoding'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-request-id': '396a411d-3240-4b8c-937b-79f740247937'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-ratelimit-remaining-subscription-writes': '1199'
+DEBUG: azure.core.pipeline.policies._universal:     'Request-Context': 'appId=cid-v1:2d2e8e63-272e-4b3c-8598-4ee570a0e70d'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-response-type': 'standard'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '98a10cd2-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-session-id': ''
+DEBUG: azure.core.pipeline.policies._universal:     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
+DEBUG: azure.core.pipeline.policies._universal:     'X-Content-Type-Options': 'nosniff'
+DEBUG: azure.core.pipeline.policies._universal:     'x-request-time': '1.036'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-correlation-request-id': '396a411d-3240-4b8c-937b-79f740247937'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-routing-request-id': 'WESTUS:20210513T212428Z:396a411d-3240-4b8c-937b-79f740247937'
+DEBUG: azure.core.pipeline.policies._universal:     'Date': 'Thu, 13 May 2021 21:24:28 GMT'
+DEBUG: azure.core.pipeline.policies._universal: Response content:
+DEBUG: azure.core.pipeline.policies._universal: {
+  "id": "/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/codes/7b444ef5-fa33-4798-a9be-6b3857103004/versions/1",
+  "name": "1",
+  "type": "Microsoft.MachineLearningServices/workspaces/codes/versions",
+  "properties": {
+    "datastoreId": "/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/datastores/workspaceblobstore",
+    "path": "az-ml-artifacts/abf5d1c340617eee61dc64c3f3dd35e8/src",
+    "isAnonymous": false,
+    "description": null,
+    "tags": {},
+    "properties": {}
+  },
+  "systemData": {
+    "createdAt": "2021-05-13T00:36:48.0914982Z",
+    "createdBy": "Manoj Bableshwar",
+    "createdByType": "User",
+    "lastModifiedAt": "2021-05-13T21:24:28.0227612Z",
+    "lastModifiedBy": "Manoj Bableshwar",
+    "lastModifiedByType": "User"
+  }
+}
+DEBUG: azure.core.pipeline.policies._universal: Request URL: 'https://management.azure.com/subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/environments/9d4b6fe0-c1a2-49bb-97c7-e95f6aafd47d/versions/1?api-version=2021-03-01-preview'
+DEBUG: azure.core.pipeline.policies._universal: Request method: 'PUT'
+DEBUG: azure.core.pipeline.policies._universal: Request headers:
+DEBUG: azure.core.pipeline.policies._universal:     'Content-Type': 'application/json'
+DEBUG: azure.core.pipeline.policies._universal:     'Accept': 'application/json'
+DEBUG: azure.core.pipeline.policies._universal:     'Content-Length': '167'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '99712638-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'User-Agent': 'azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.6.10 (Linux-4.15.0-1113-azure-x86_64-with-debian-10.2) cloud-shell/1.0'
+DEBUG: azure.core.pipeline.policies._universal:     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL21hbmFnZW1lbnQuY29yZS53aW5kb3dzLm5ldC8iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC83MmY5ODhiZi04NmYxLTQxYWYtOTFhYi0yZDdjZDAxMWRiNDcvIiwiaWF0IjoxNjIwOTQwMTc1LCJuYmYiOjE2MjA5NDAxNzUsImV4cCI6MTYyMDk0NDA3NSwiX2NsYWltX25hbWVzIjp7Imdyb3VwcyI6InNyYzEifSwiX2NsYWltX3NvdXJjZXMiOnsic3JjMSI6eyJlbmRwb2ludCI6Imh0dHBzOi8vZ3JhcGgud2luZG93cy5uZXQvNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3L3VzZXJzLzgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYi9nZXRNZW1iZXJPYmplY3RzIn19LCJhY3IiOiIxIiwiYWlvIjoiQVZRQXEvOFRBQUFBdTJiL2lTUnh0TEgyTWJVRTlnS2RhZFdLMzBlV2x2bGlwMjlZc1JtOHFDRTd0eVVIaGdOTlZyK2JyWlpXL2Qxa21HOTVPYmE4ZEhMTTh4YjJEZ1Nld0V4U2M4b0xkSVVtSmJoQm9zWFpIOTA9IiwiYW1yIjpbIndpYSIsIm1mYSJdLCJhcHBpZCI6ImM0NGI0MDgzLTNiYjAtNDljMS1iNDdkLTk3NGU1M2NiZGYzYyIsImFwcGlkYWNyIjoiMiIsImRldmljZWlkIjoiOWVlYjhkNGUtNWQ4Yi00ZmY1LTk4NzYtNGFjNDQ3NjY5YjVlIiwiZmFtaWx5X25hbWUiOiJCYWJsZXNod2FyIiwiZ2l2ZW5fbmFtZSI6Ik1hbm9qIiwiaXBhZGRyIjoiMjA3LjExNS42Ni4yNDYiLCJuYW1lIjoiTWFub2ogQmFibGVzaHdhciIsIm9pZCI6IjgyZjQ3ODNlLTkwMmEtNGVkNi05YjgyLTI0ZWNhYmIwYWRkYiIsIm9ucHJlbV9zaWQiOiJTLTEtNS0yMS0yMTQ2NzczMDg1LTkwMzM2MzI4NS03MTkzNDQ3MDctMTYxODQ0MyIsInB1aWQiOiIxMDAzMDAwMDg1RDNEMDVGIiwicmgiOiIwLkFSb0F2NGo1Y3ZHR3IwR1JxeTE4MEJIYlI0TkFTOFN3TzhGSnRIMlhUbFBMM3p3YUFKdy4iLCJzY3AiOiJ1c2VyX2ltcGVyc29uYXRpb24iLCJzdWIiOiJRZjJDbjU5ZUMtNlJyQ1pZR2t3ajYzRkZwQ3dtbWViVWQ0MEt0d01Calk4IiwidGlkIjoiNzJmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3IiwidW5pcXVlX25hbWUiOiJtYWJhYmxlc0BtaWNyb3NvZnQuY29tIiwidXBuIjoibWFiYWJsZXNAbWljcm9zb2Z0LmNvbSIsInV0aSI6IjdBWG53Ukk1UTBlc0plRUY2VjE2QUEiLCJ2ZXIiOiIxLjAiLCJ4bXNfdGNkdCI6MTI4OTI0MTU0N30.Ih8iTv1gCDkq1UfxdhRStUxFx9VBOPfW0wRzW5r_aPut3tGt6XfBaGTtjclBGfeyksvIBLyczW-BOL2dKQsXrB5dWC01WHovu18CU-j3nU4zKkkbpOuFTzPuZ1NPCEpBJDljy1COck4dcXaGR-Pp6uR9xOa4DkvfjDlwcDWWC0obEjAs0eYx4bJNv8TI5L6fp5j2RK0f4lTAtsPZSgWqk9NcF4KhSrDzSM9_f3AOexL6WQBtM_J9TKM6GkhJewjvUvE_mpe7aDkrrKQcsThmqrT0aOTSJr281kvz17R8IcAT1Or2-7L5n8mYZ4YQ2W0oM3iqeMieUJyD9o5ux0J0MA'
+DEBUG: azure.core.pipeline.policies._universal: Request body:
+DEBUG: azure.core.pipeline.policies._universal: {"properties": {"docker": {"dockerSpecificationType": "Image", "platform": {}, "dockerImageUri": "docker.io/python"}, "condaFile": "./conda.yml", "isAnonymous": true}}
+DEBUG: urllib3.connectionpool: https://management.azure.com:443 "PUT /subscriptions/21d8f407-c4c4-452e-87a4-e609bfb86248/resourceGroups/OpenDatasetsPMRG/providers/Microsoft.MachineLearningServices/workspaces/OpenDatasetsPMWorkspace/environments/9d4b6fe0-c1a2-49bb-97c7-e95f6aafd47d/versions/1?api-version=2021-03-01-preview HTTP/1.1" 400 960
+DEBUG: azure.core.pipeline.policies._universal: Response status: 400
+DEBUG: azure.core.pipeline.policies._universal: Response headers:
+DEBUG: azure.core.pipeline.policies._universal:     'Cache-Control': 'no-cache'
+DEBUG: azure.core.pipeline.policies._universal:     'Pragma': 'no-cache'
+DEBUG: azure.core.pipeline.policies._universal:     'Content-Length': '960'
+DEBUG: azure.core.pipeline.policies._universal:     'Content-Type': 'application/json; charset=utf-8'
+DEBUG: azure.core.pipeline.policies._universal:     'Expires': '-1'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-ratelimit-remaining-subscription-writes': '1198'
+DEBUG: azure.core.pipeline.policies._universal:     'Request-Context': 'appId=cid-v1:2d2e8e63-272e-4b3c-8598-4ee570a0e70d'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-response-type': 'error'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-request-id': '99712638-b431-11eb-9caa-0a580af4bc60'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-client-session-id': ''
+DEBUG: azure.core.pipeline.policies._universal:     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
+DEBUG: azure.core.pipeline.policies._universal:     'X-Content-Type-Options': 'nosniff'
+DEBUG: azure.core.pipeline.policies._universal:     'x-request-time': '0.018'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-request-id': '62dbdf54-5519-4c63-b1b8-c162b54c39f6'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-correlation-request-id': '62dbdf54-5519-4c63-b1b8-c162b54c39f6'
+DEBUG: azure.core.pipeline.policies._universal:     'x-ms-routing-request-id': 'WESTUS:20210513T212428Z:62dbdf54-5519-4c63-b1b8-c162b54c39f6'
+DEBUG: azure.core.pipeline.policies._universal:     'Date': 'Thu, 13 May 2021 21:24:28 GMT'
+DEBUG: azure.core.pipeline.policies._universal: Response content:
+DEBUG: azure.core.pipeline.policies._universal: {
+  "error": {
+    "code": "UserError",
+    "severity": null,
+    "message": "Invalid CondaFile configuration value. Conda specification has invalid Yaml format",
+    "messageFormat": "Invalid {0} configuration value. {1}",
+    "messageParameters": {
+      "0": "CondaFile",
+      "1": "Conda specification has invalid Yaml format"
+    },
+    "referenceCode": null,
+    "detailsUri": null,
+    "target": null,
+    "details": [],
+    "innerError": {
+      "code": "BadArgument",
+      "innerError": {
+        "code": "ArgumentInvalid",
+        "innerError": {
+          "code": "EnvironmentSpecificationPropertyInvalidOrEmpty",
+          "innerError": null
+        }
+      }
+    },
+    "debugInfo": null
+  },
+  "correlation": {
+    "operation": "0f0c45f00ac31140a7d49cca86119d50",
+    "request": "399e82e92c1b4f48"
+  },
+  "environment": "eastus2",
+  "location": "eastus2",
+  "time": "2021-05-13T21:24:28.7752926+00:00",
+  "componentName": "managementfrontend"
+}
+DEBUG: azext_mlv2.manual.custom.print_error: Received HttpResponseError: Traceback (most recent call last):
+  File "/home/manoj/.azure/cliextensions/ml/azext_mlv2/manual/custom/job.py", line 71, in ml_job_create
+    job = ml_client.jobs.create_or_update(job=job)
+  File "/home/manoj/.azure/cliextensions/ml/azext_mlv2/manual/vendored_curated_sdk/azure/ml/_operations/job_operations.py", line 160, in create_or_update
+    self._resolve_arm_id_or_upload_dependencies(job)
+  File "/home/manoj/.azure/cliextensions/ml/azext_mlv2/manual/vendored_curated_sdk/azure/ml/_operations/job_operations.py", line 335, in _resolve_arm_id_or_upload_dependencies
+    return self._resolve_arm_id_or_AzureML_id(job, self._orchestrators.get_asset_arm_id)
+  File "/home/manoj/.azure/cliextensions/ml/azext_mlv2/manual/vendored_curated_sdk/azure/ml/_operations/job_operations.py", line 428, in _resolve_arm_id_or_AzureML_id
+    j.component = resolver(j.component, azureml_type=AzureMLResourceType.COMPONENT)
+  File "/home/manoj/.azure/cliextensions/ml/azext_mlv2/manual/vendored_curated_sdk/azure/ml/_operations/operation_orchestrator.py", line 103, in get_asset_arm_id
+    return self._get_component_arm_id(asset)
+  File "/home/manoj/.azure/cliextensions/ml/azext_mlv2/manual/vendored_curated_sdk/azure/ml/_operations/operation_orchestrator.py", line 142, in _get_component_arm_id
+    return self._component.create_or_update(component).id
+  File "/home/manoj/.azure/cliextensions/ml/azext_mlv2/manual/vendored_curated_sdk/azure/ml/_operations/component_operations.py", line 86, in create_or_update
+    self._upload_dependencies(component)
+  File "/home/manoj/.azure/cliextensions/ml/azext_mlv2/manual/vendored_curated_sdk/azure/ml/_operations/component_operations.py", line 157, in _upload_dependencies
+    component.environment = resolver(component.environment, azureml_type=AzureMLResourceType.ENVIRONMENT)
+  File "/home/manoj/.azure/cliextensions/ml/azext_mlv2/manual/vendored_curated_sdk/azure/ml/_operations/operation_orchestrator.py", line 97, in get_asset_arm_id
+    return self._get_environment_arm_id(asset, register_asset=register_asset)
+  File "/home/manoj/.azure/cliextensions/ml/azext_mlv2/manual/vendored_curated_sdk/azure/ml/_operations/operation_orchestrator.py", line 119, in _get_environment_arm_id
+    env_response = self._environments.create_or_update(environment)
+  File "/home/manoj/.azure/cliextensions/ml/azext_mlv2/manual/vendored_curated_sdk/azure/ml/_operations/environment_operations.py", line 42, in create_or_update
+    **self._kwargs,
+  File "/home/manoj/.azure/cliextensions/ml/azext_mlv2/manual/vendored_curated_sdk/azure/ml/_restclient/_2021_03_01_preview/machinelearningservices/operations/_environment_specification_versions_operations.py", line 122, in create_or_update
+    raise HttpResponseError(response=response, model=error, error_format=ARMErrorFormat)
+azure.core.exceptions.HttpResponseError: (UserError) Invalid CondaFile configuration value. Conda specification has invalid Yaml format
+
+Code: UserError
+Message: Invalid CondaFile configuration value. Conda specification has invalid Yaml format
+DEBUG: cli.knack.cli: Event: Cli.PostExecute [<function AzCliLogging.deinit_cmd_metadata_logging at 0x7f005cdb51e0>]
+INFO: az_command_data_logger: exit code: 1
+INFO: cli.__main__: Command ran in 7.535 seconds (init: 0.181, invoke: 7.354)
+INFO: telemetry.save: Save telemetry record of length 3040 in cache
+WARNING: telemetry.check: Negative: The /home/manoj/.azure/telemetry.txt was modified at 2021-05-13 21:14:54.405654, which in less than 600.000000 s
