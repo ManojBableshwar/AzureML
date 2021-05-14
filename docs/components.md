@@ -21,7 +21,7 @@ command: >-
   python hello.py
 ```
 
-The `code` section points to the location where the script source code is located. The `Environment` refers to the execution environment in which the script will be run. The `command` section defines the actual command string that will be run when this component is executed. You can run a component by referencing it in a Pipeline Job. You can run this simple component with `az ml job create --file pipeline.yml`. The Pipeline Job binds the component to a `compute` on which the the component can run in a `component_job`. Code and sample output is available [here](https://github.com/ManojBableshwar/AzureML/blob/master/samples/2a_basic_component).
+The `code` section points to the location where the script source code is located. The `Environment` refers to the execution environment in which the script will be run. The `command` section defines the actual command string that will be run when this component is executed. You can run a component by referencing it in a Pipeline Job. You can run this simple component with `az ml job create --file pipeline.yml`. The Pipeline Job binds the component to a `compute` on which the the component can run in a `component_job`. Code and sample output is available [here](../samples/2a_basic_component).
 
 ```yaml
 type: pipeline_job
@@ -71,7 +71,8 @@ command: >-
 
 ```
 
-Below is a Pipeline Job that assigns values to the Inputs and Outputs of the component. Code and sample output for this component and job is available [here](https://github.com/ManojBableshwar/AzureML/tree/master/samples/2b_component_with_input_output).
+Below is a Pipeline Job that assigns values to the Inputs and Outputs of the component. Code and sample output for this component and job is available [here](../samples/2b_component_with_input_output).
+
 
 ```yaml
 type: pipeline_job
