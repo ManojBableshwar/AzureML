@@ -1,3 +1,5 @@
+Below samples are no longer maintained. They have been moved to: https://github.com/Azure/azureml-previews/tree/main/previews/pipelines/
+
 ### Setup instructions for Pipeline Job with Command Components preview
 
 Pre-reqs:
